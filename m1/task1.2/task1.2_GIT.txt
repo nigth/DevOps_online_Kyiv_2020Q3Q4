@@ -1,0 +1,19 @@
+372d46e HEAD@{0}: merge develop: Fast-forward
+0ec267f HEAD@{1}: checkout: moving from develop to master
+372d46e HEAD@{2}: commit (merge): commited IMAGES and STYLES banches into DEVELOP branch, and solved index.html conlicts
+10f8675 HEAD@{3}: merge images: Fast-forward
+fea70d7 HEAD@{4}: checkout: moving from styles to develop
+38c755a HEAD@{5}: commit: 17. commited changes in the INDEX html about adding STYLES
+55d6ec9 HEAD@{6}: commit: 16. commited style.css file in STYLES folder of STYLES branch
+6caf6bf HEAD@{7}: commit: 13. commited style.css file in STYLES folder of STYLES branch
+fea70d7 HEAD@{8}: checkout: moving from develop to styles
+fea70d7 HEAD@{9}: checkout: moving from images to develop
+10f8675 HEAD@{10}: commit: 14. commited changes in the INDEX.HTML
+45e4b14 HEAD@{11}: commit: 13. commited two images in the IMAGE folder in a new branch IMAGE
+fea70d7 HEAD@{12}: checkout: moving from develop to images
+fea70d7 HEAD@{13}: commit: 12. commited empty index.html on a new branch DEVELOP
+0ec267f HEAD@{14}: checkout: moving from master to develop
+0ec267f HEAD@{15}: commit: 10. make initial commit
+5915ded HEAD@{16}: commit: renamed empty folders 2
+64711d6 HEAD@{17}: commit: added empty folders for tasks
+7616ef8 HEAD@{18}: clone: from git@github.com:nigth/DevOps_online_Kyiv_2020Q3Q4.git
