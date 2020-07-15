@@ -22,7 +22,7 @@ Name *`hp4330_yatsyuta`* impossible: underline "_" restricted *(only letters, di
 :white_check_mark: 1.7. For VM1, changing its state, take several different snapshots, forming a branched
 tree of snapshots.  
 ![Screenshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.2/screenshots/scr2vbox.png "Screenshot 2")  
-:white_check_mark: 1.8. Export VM1. Save the *.ova file to disk. Import VM from *.ova file.
+:white_check_mark: 1.8. Export VM1. Save the `vm1.ova` file to disk. Import VM from `vm1.ova` file.  
 :black_square_button: **2. Configuration of virtual machines:**  
 :white_check_mark: 2.1. Explore VM configuration options (general settings, system settings, display,
 storage, audio, network, etc.).  
