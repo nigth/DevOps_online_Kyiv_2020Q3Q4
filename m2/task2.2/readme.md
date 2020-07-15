@@ -42,6 +42,7 @@ Use the `ping` command to do this. Make a table of possible connections.
 |Bridge   | YES | YES | YES | YES | YES | 
 |NAT      | YES | p/f | no | YES | p/f |
 |NAT service| YES | p/f | YES | YES | p/f |
+ 
 *p/f - Port Forwarding
 
 :black_square_button: **3. Work with CLI through VBoxManage:**  
