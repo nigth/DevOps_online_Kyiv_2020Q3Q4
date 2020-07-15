@@ -35,10 +35,14 @@ the host [1, ch.4.3].
 Check the connection between VM1, VM2, Host, Internet for different network modes.  
 Use the `ping` command to do this. Make a table of possible connections.  
 
-| LEFT | CENTER | RIGHT |
-|----------------|:---------:|----------------:|
-| По левому краю | По центру | По правому краю |
-| текст | текст | текст |
+| Adapter | VM -> Host | Host -> VM | VM1 <-> VM2 | VM -> Net/Lan | Net/Lan -> VM |
+|:-------:|:----------:|:----------:|:-----------:|:-------------:|:-------------:|
+|Host only| YES | YES| YES | no | no |
+|Internal | no  | no | YES | no | no | 
+|Bridge   | YES | YES | YES | YES | YES | 
+|NAT      | YES | p/f | no | YES | p/f |
+|NAT service| YES | p/f | YES | YES | p/f |
+*p/f - Port Forwarding
 
 :black_square_button: **3. Work with CLI through VBoxManage:**  
 :white_check_mark: 3.1. Open the BASH terminal.  
