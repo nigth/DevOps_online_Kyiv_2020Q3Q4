@@ -60,6 +60,7 @@ vagrant init hashicorp/precise64
 ```
 vagrant up
 ```
+![Screenshot 4](/screenshots/scr4vagrant.png "Screenshot 4")  
 :black_square_button: 5. Connect to the VM  using SSH, IP address and port listed above (127.0.0.1:2222).  
 By default, login - `vagrant` and password are also `vagrant`  
 ```
@@ -77,4 +78,6 @@ vagrant destroy
 :black_square_button: 8. Create your own Vagrant box  
 :negative_squared_cross_mark: 9. *(optional)* Create a test environment from a few servers.  
 Servers' parameters are chosen independently by the student.  
-Screenshot 4:  
+Screenshot 5:  
+  
+
