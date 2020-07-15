@@ -62,9 +62,10 @@ vagrant up
 ```
 ![Screenshot 4](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.2/screenshots/scr4vagrant.png "Screenshot 4")  
 :black_square_button: 5. Connect to the VM  using SSH, IP address and port listed above (127.0.0.1:2222).  
-By default, login - `vagrant` and password are also `vagrant`  
+By default, login - `vagrant` and password are also `vagrant` (or use `default` VM name):  
 ```
 ssh vagrant@127.0.0.1:2222
+vagrant ssh default
 ```
 :black_square_button: 6. Record the date and time by executing the date command  
 ```
