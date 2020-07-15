@@ -16,12 +16,13 @@ also added `Oracle_VM_VirtualBox_Extension_Pack-6.1.12.vbox-extpack`
 Name *`hp4330_yatsyuta`* impossible: underline "_" restricted *(only letters, digits and dot "." allowed)*  
 :white_check_mark: 1.4. Get acquainted with the possibilities of VM1 control -  
  start, stop, reboot, save state, use Host key and keyboard shortcuts, mouse capture, etc.  
-:black_square_button: 1.5. Clone an existing VM1 by creating a VM2.  
-:black_square_button: 1.6. Create a group of two VM: VM1, VM2 and learn the functions related to groups [1,
+:white_check_mark: 1.5. Clone an existing VM1 by creating a VM2.  
+![Screenshot 1](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.2/screenshots/scr1vbox.png "Screenshot 1")  
+:white_check_mark: 1.6. Create a group of two VM: VM1, VM2 and learn the functions related to groups [1,
 п.1.10].  
-:black_square_button: 1.7. For VM1, changing its state, take several different snapshots, forming a branched
+:white_check_mark: 1.7. For VM1, changing its state, take several different snapshots, forming a branched
 tree of snapshots [1, ch.1.11].  
-:black_square_button: 1.8. Export VM1. Save the *.ova file to disk. Import VM from *.ova file [1, ch.1.15].
+:white_check_mark: 1.8. Export VM1. Save the *.ova file to disk. Import VM from *.ova file [1, ch.1.15].
 Screenshot 1:  
 :black_square_button: **2. Configuration of virtual machines:**  
 :white_check_mark: 2.1. Explore VM configuration options (general settings, system settings, display,
@@ -30,6 +31,7 @@ storage, audio, network, etc.).
 [1, ch.3.11].  
 :white_check_mark: 2.3. Configure a shared folder to exchange data between the virtual machine and
 the host [1, ch.4.3].  
+![Screenshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.2/screenshots/scr2vbox.png "Screenshot 2")  
 :black_square_button: 2.4. Configure different network modes for VM1, VM2.  
 Check the connection between VM1, VM2, Host, Internet for different network modes.  
 Use the `ping` command to do this. Make a table of possible connections.  
@@ -69,7 +71,8 @@ vagrant ssh default
 ```
 :white_check_mark: 6. Record the date and time by executing the date command  
 ```
-date
+$ date
+Wed Jul 15 15:38:56 UTC 2020
 ```
 :white_check_mark: 7. Stop and delete the created VM.  
 ```
