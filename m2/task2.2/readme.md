@@ -52,11 +52,11 @@ vagrant: /usr/bin/vagrant /opt/vagrant/bin/vagrant
 ```
 mkdir ~/vagrant_test && cd ~/vagrant_test
 ```
-:black_square_button: 3. Initialize the environment init hashicorp/precise64 with the default Vagrant  
+:white_check_mark: 3. Initialize the environment init hashicorp/precise64 with the default Vagrant  
 ```
 vagrant init hashicorp/precise64
 ```
-:black_square_button: 4. Run vagrant up and watch for messages during VM boot and startup.  
+:white_check_mark: 4. Run vagrant up and watch for messages during VM boot and startup.  
 ```
 vagrant up
 ```
