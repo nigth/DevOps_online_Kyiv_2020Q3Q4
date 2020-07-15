@@ -75,9 +75,10 @@ date
 vagrant halt
 vagrant destroy
 ```
+![Screenshot 5](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.2/screenshots/scr5vagrant.png "Screenshot 5")  
 :black_square_button: 8. Create your own Vagrant box  
 :negative_squared_cross_mark: 9. *(optional)* Create a test environment from a few servers.  
 Servers' parameters are chosen independently by the student.  
-Screenshot 5:  
+
   
 
