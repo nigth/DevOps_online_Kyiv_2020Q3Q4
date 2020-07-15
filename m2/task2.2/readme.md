@@ -60,7 +60,7 @@ vagrant init hashicorp/precise64
 ```
 vagrant up
 ```
-![Screenshot 4](/screenshots/scr4vagrant.png "Screenshot 4")  
+![Screenshot 4](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.2/screenshots/scr4vagrant.png "Screenshot 4")  
 :black_square_button: 5. Connect to the VM  using SSH, IP address and port listed above (127.0.0.1:2222).  
 By default, login - `vagrant` and password are also `vagrant`  
 ```
