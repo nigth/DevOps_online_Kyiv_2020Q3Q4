@@ -24,11 +24,11 @@ tree of snapshots [1, ch.1.11].
 :black_square_button: 1.8. Export VM1. Save the *.ova file to disk. Import VM from *.ova file [1, ch.1.15].
 Screenshot 1:  
 :black_square_button: **2. Configuration of virtual machines:**  
-:black_square_button: 2.1. Explore VM configuration options (general settings, system settings, display,
+:white_check_mark: 2.1. Explore VM configuration options (general settings, system settings, display,
 storage, audio, network, etc.).  
-:black_square_button: 2.2. Configure the USB to connect the USB ports of the host machine to the VM
+:white_check_mark: 2.2. Configure the USB to connect the USB ports of the host machine to the VM
 [1, ch.3.11].  
-:black_square_button: 2.3. Configure a shared folder to exchange data between the virtual machine and
+:white_check_mark: 2.3. Configure a shared folder to exchange data between the virtual machine and
 the host [1, ch.4.3].  
 :black_square_button: 2.4. Configure different network modes for VM1, VM2.  
 Check the connection between VM1, VM2, Host, Internet for different network modes.  
