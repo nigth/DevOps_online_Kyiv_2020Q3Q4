@@ -26,19 +26,21 @@ https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=
 3.1. AWS console S3 service login.  
 3.2. Create S3 bucket.  
 3.2.a. Create bucket.  
-3.2.b. Bucket name - `max-bckt`, region - **US East (Ohio)**. 
+3.2.b. Bucket name - `max-bckt`, region - **US East (Ohio)**.  
 3.2.c. No additional options.  
 3.2.d. Leave default permissions (`Block all public access`).  
-3.2.e. Check and create.  
 ![Sshot 3](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/3_create_bucket.png "Sshot 3")  
+3.2.e. Check and create.  
 ![Sshot 4](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/4_manage_buckets.png "Sshot 4")  
 3.3. Send a file.  
-3.3.a.  
-3.3.b.  
-3.3.c.  
-3.3.d.  
-3.3.e.  
-3.3.f.  
+3.3.a. Open a bucket.  
+3.3.b. Press the "Upload" button.  
+3.3.c. Select and add the files (my screenshots).  
+3.3.d. Leave default permissions.  
+3.3.e. Leave default privileges.  
+![Sshot 5](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/5_upload_files.png "Sshot 5")  
+3.3.f. Check and send.  
+![Sshot 6](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/6_files_list.png "Sshot 6")  
 3.4. Extract an object.  
 3.4.a.  
 3.5. Remove an object and a bucket.  
