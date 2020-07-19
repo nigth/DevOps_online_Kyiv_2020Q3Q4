@@ -1,9 +1,9 @@
 ## Task 2.3
 ### Module 2. Virtualization and Cloud Basic
-:white_check_mark: **1.** Read the terms of Using the AWS Free Tier and the ability to control their own costs.  
+:white_check_mark: **1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.**  
 https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-tier.html  
 
-:white_check_mark: **2.** Review the 10-minute example Launch a Linux Virtual Machine.  
+:white_check_mark: **2. Review the 10-minute example Launch a Linux Virtual Machine.**  
 Repeat, create my own VM in the AWS cloud and connect to it (use `t2.micro` and _CentOS_).  
 https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=gs_card  
 2.1. Create Lightsail account.  
@@ -21,7 +21,7 @@ https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=g
 ![Sshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/2_lightsail_ssh.png "Sshot 2")  
 2.5. Stop the instance.  
 
-:white_check_mark: **3.** Review the 10-minute example Store and Retrieve a File. Repeat, create my own repository.  
+:white_check_mark: **3. Review the 10-minute example Store and Retrieve a File. Repeat, create my own repository.**  
 https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=gs_card  
 3.1. AWS console S3 service login.  
 3.2. Create S3 bucket.  
@@ -49,16 +49,26 @@ https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=
 3.5.c. Go to the Amazon S3 to view all buckets.  
 3.5.d. Mark a bucket and press the "Delete" button, type its name to confirm.  
 
-:black_square_button: **4.** Review the 10-minute example. Repeat the steps, create my own site.  
+:black_square_button: **4. Review the 10-minute example. Repeat the steps, create my own site.**  
 https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/  
+4.1. Create an Amazon Lightsail Account.  
+4.2. Create a WordPress instance in Lightsail.  
+4.2.a. Sign into the Lightsail console.  
+4.2.b. On the Instances tab of the Lightsail home page, choose Create instance.  
+4.2.c. Choose the AWS Region and Availability Zone for your instance - **Frankfurt, Zone A (eu-central-1a)**.  
+4.2.d. Choose instance image Linux/Unix, WordPress. 
+4.2.e. Choose an instance plan 3,50 USD (512MB RAM, 1 vCPU, 20GB SSD, transfer 1TB), first month free.   
+4.2.f. Enter a name for instance - **`wp-max`**  
+4.2.g. Choose Create instance.  
+![Sshot 7](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/7_wordpress_lightsail.png "Sshot 7")  
 
-:black_square_button: **5.** Review the 10-minute example. Create my own domain and domain name for my site.  
+:black_square_button: **5. Review the 10-minute example. Create my own domain and domain name for my site.**  
 https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls  
 
-:black_square_button: **6.** Review the 10-minute example. Create a user AWS IAM, configure CLI AWS and upload files to S3.  
+:black_square_button: **6. Review the example. Create a user AWS IAM, configure CLI AWS and upload files to S3.**  
 https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls  
 
-:black_square_button: **7.** Create a static site in S3, publicly available. Post on the page my own photo,  
+:black_square_button: **7. Create a static site in S3, publicly available.** Post on the page my own photo,  
 the name of the educational program and a list of AWS services with which I worked.  
 
 
