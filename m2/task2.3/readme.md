@@ -98,10 +98,8 @@ https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/
 4.6.d.1. In the DNS zone for your domain, choose Add record.  
 4.6.d.2. In the Subdomain box, enter an @ symbol to map the apex of my domain to my instance.  
 4.6.d.3. In the Maps to box, choose the static IP that is attached to the WordPress instance.  
-![Sshot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/12_add_a_record.png "Sshot 12")  
-
 4.6.d.4. Choose the save icon.  
-![Sshot 13](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/13_a_record_added.png "Sshot 13")  
+![Sshot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/12_add_a_record.png "Sshot 12")  
 
 :black_square_button: **5. Review the 10-minute example. Create my own domain and domain name for my site.**  
 https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls  
