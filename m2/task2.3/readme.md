@@ -101,6 +101,9 @@ https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/
 4.6.d.4. Choose the save icon.  
 ![Sshot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/12_add_a_record.png "Sshot 12")  
 
+**4.7.** Modify main page and create my own site:  
+![Sshot 13](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/13_my_wp_site.png "Sshot 13")  
+
 :black_square_button: **5. Review the 10-minute example. Create my own domain and domain name for my site.**  
 https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls  
 
