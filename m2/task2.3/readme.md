@@ -42,12 +42,12 @@ https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=
 3.3.f. Check and send.  
 ![Sshot 6](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/6_files_list.png "Sshot 6")  
 3.4. Extract an object.  
-3.4.a.  
+3.4.a. Mark a file and press the "Download" button.  
 3.5. Remove an object and a bucket.  
-3.5.a.  
-3.5.b.  
-3.5.c.  
-3.5.d.  
+3.5.a. Mark a file, select the "Actions-Delete" menu.  
+3.5.b. Check and confirm delete.  
+3.5.c. Go to the Amazon S3 to view all buckets.  
+3.5.d. Mark a bucket and press the "Delete" button, type its name to confirm.  
 
 :black_square_button: **4.** Review the 10-minute example. Repeat the steps, create my own site.  
 https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/  
