@@ -3,7 +3,7 @@
 :white_check_mark: 1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.  
 https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-tier.html  
 
-:black_square_button: 2. Review the 10-minute example Launch a Linux Virtual Machine.  
+:white_check_mark: 2. Review the 10-minute example Launch a Linux Virtual Machine.  
 Repeat, create your own VM in the AWS cloud and connect to it.  
 It is recommended to use the `t2.micro` instance and the _CentOS_ operating system.  
 https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=gs_card  
@@ -18,6 +18,8 @@ https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=g
 2.3.j. Creating.  
 ![Sshot 1](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/1_create_light_inst.png "Sshot 1")  
 2.4. Connect to the instance.  
+2.4.a. Instances - SSH through WEB browser:
+![Sshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/2_lightsail_ssh.png.png "Sshot 2")  
 
 :black_square_button: 3. Review the 10-minute example Store and Retrieve a File.  
 Repeat, creating your own repository.  
