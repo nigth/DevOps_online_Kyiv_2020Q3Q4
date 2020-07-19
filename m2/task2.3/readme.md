@@ -7,6 +7,17 @@ https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-
 Repeat, create your own VM in the AWS cloud and connect to it.  
 It is recommended to use the `t2.micro` instance and the _CentOS_ operating system.  
 https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=gs_card  
+2.1. Create Lightsail account.  
+2.2. Create Lightsail instance.  
+2.3.a. Instance location - **Frankfurt, Zone A (eu-central-1a)**  
+2.3.b. Linux/Unix, OS only.  
+2.3.c. OS - CentOS.  
+2.3.g. Plan - 3,50 USD (512MB RAM, 1 vCPU, 20GB SSD, transfer 1TB), first month free.  
+2.3.h. Instance name - `centos-1`   
+2.3.i. Add key-only tag - `maxim`  
+2.3.j. Creating.  
+![Sshot 1](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/1_create_light_inst.png "Sshot 1")  
+2.4. Connect to the instance.  
 
 :black_square_button: 3. Review the 10-minute example Store and Retrieve a File.  
 Repeat, creating your own repository.  
