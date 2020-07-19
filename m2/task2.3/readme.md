@@ -19,7 +19,7 @@ https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=g
 ![Sshot 1](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/1_create_light_inst.png "Sshot 1")  
 2.4. Connect to the instance.  
 2.4.a. Instances - SSH through WEB browser:
-![Sshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/2_lightsail_ssh.png.png "Sshot 2")  
+![Sshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/2_lightsail_ssh.png "Sshot 2")  
 
 :black_square_button: 3. Review the 10-minute example Store and Retrieve a File.  
 Repeat, creating your own repository.  
