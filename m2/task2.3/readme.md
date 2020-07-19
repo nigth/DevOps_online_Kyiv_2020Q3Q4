@@ -104,8 +104,12 @@ https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/
 **4.7.** Modify main page and create my own site:  
 ![Sshot 13](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/13_my_wp_site.png "Sshot 13")  
 
-:black_square_button: **5. Review the 10-minute example. Create my own domain and domain name for my site.**  
+:white_check_mark: **5. Review the 10-minute example.**
+Explore the possibilities of creating my own domain and domain name for my site.  
 https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls  
+In the process of exploring the possibilities of creating my domain name for own site,
+I decided to use my existing domain name, registered in other registrant, different from AWS.
+On the previous sub-task 2.3.4, I transfered DNS-record for it and attached it to the WordPress blog.
 
 :black_square_button: **6. Review the example. Create a user AWS IAM, configure CLI AWS and upload files to S3.**  
 https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls  
