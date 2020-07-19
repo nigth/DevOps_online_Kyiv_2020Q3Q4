@@ -4,8 +4,7 @@
 https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-tier.html  
 
 :white_check_mark: **2.** Review the 10-minute example Launch a Linux Virtual Machine.  
-Repeat, create your own VM in the AWS cloud and connect to it.  
-It is recommended to use the `t2.micro` instance and the _CentOS_ operating system.  
+Repeat, create my own VM in the AWS cloud and connect to it (use `t2.micro` and _CentOS_).  
 https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=gs_card  
 2.1. Create Lightsail account.  
 2.2. Create Lightsail instance.  
@@ -20,25 +19,44 @@ https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=g
 2.4. Connect to the instance.  
 2.4.a. Instances - SSH through WEB browser:
 ![Sshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/2_lightsail_ssh.png "Sshot 2")  
+2.5. Stop the instance.  
 
-:black_square_button: **3.** Review the 10-minute example Store and Retrieve a File.  
-Repeat, creating your own repository.  
+:white_check_mark: **3.** Review the 10-minute example Store and Retrieve a File. Repeat, create my own repository.  
 https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=gs_card  
+3.1. AWS console S3 service login.  
+3.2. Create S3 bucket.  
+3.2.a. Create bucket.  
+3.2.b. Bucket name - `max-bckt`, region - **US East (Ohio)**. 
+3.2.c. No additional options.  
+3.2.d. Leave default permissions (`Block all public access`).  
+3.2.e. Check and create.  
+![Sshot 3](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/3_create_bucket.png "Sshot 3")  
+![Sshot 4](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/4_manage_buckets.png "Sshot 4")  
+3.3. Send a file.  
+3.3.a.  
+3.3.b.  
+3.3.c.  
+3.3.d.  
+3.3.e.  
+3.3.f.  
+3.4. Extract an object.  
+3.4.a.  
+3.5. Remove an object and a bucket.  
+3.5.a.  
+3.5.b.  
+3.5.c.  
+3.5.d.  
 
-:black_square_button: **4.** Review the 10-minute example.  
-Repeat the steps, create your own site.  
+:black_square_button: **4.** Review the 10-minute example. Repeat the steps, create my own site.  
 https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/  
 
-:black_square_button: **5.** Review the 10-minute example.  
-Explore the possibilities of creating your own domain and domain name for your site.  
+:black_square_button: **5.** Review the 10-minute example. Create my own domain and domain name for my site.  
 https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls  
 
-:black_square_button: **6.** Review the 10-minute example.  
-Create a user AWS IAM, configure CLI AWS and upload any files to S3.  
+:black_square_button: **6.** Review the 10-minute example. Create a user AWS IAM, configure CLI AWS and upload files to S3.  
 https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls  
 
-:black_square_button: **7.** Create a static site in S3, publicly available.  
-Post on the page your own photo, the name of the educational program and  
-a list of AWS services with which the student worked within the educational program or earlier.  
+:black_square_button: **7.** Create a static site in S3, publicly available. Post on the page my own photo,  
+the name of the educational program and a list of AWS services with which I worked.  
 
 
