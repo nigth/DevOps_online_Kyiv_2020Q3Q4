@@ -6,8 +6,9 @@ https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-
 :white_check_mark: **2. Review the 10-minute example Launch a Linux Virtual Machine.**  
 Repeat, create my own VM in the AWS cloud and connect to it (use `t2.micro` and _CentOS_).  
 https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=gs_card  
-2.1. Create Lightsail account.  
-2.2. Create Lightsail instance.  
+**2.1.** Create Lightsail account.  
+**2.2.** Create Lightsail instance.  
+**2.3.** Configure my Amazon Lightsail instance.  
 2.3.a. Instance location - **Frankfurt, Zone A (eu-central-1a)**  
 2.3.b. Linux/Unix, OS only.  
 2.3.c. OS - CentOS.  
@@ -16,15 +17,15 @@ https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=g
 2.3.i. Add key-only tag - `maxim`  
 2.3.j. Creating.  
 ![Sshot 1](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/1_create_light_inst.png "Sshot 1")  
-2.4. Connect to the instance.  
+**2.4.** Connect to the instance.  
 2.4.a. Instances - SSH through WEB browser:
 ![Sshot 2](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/2_lightsail_ssh.png "Sshot 2")  
-2.5. Stop the instance.  
+**2.5.** Stop the instance.  
 
 :white_check_mark: **3. Review the 10-minute example Store and Retrieve a File. Repeat, create my own repository.**  
 https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=gs_card  
-3.1. AWS console S3 service login.  
-3.2. Create S3 bucket.  
+**3.1.** AWS console S3 service login.  
+**3.2.** Create S3 bucket.  
 3.2.a. Create bucket.  
 3.2.b. Bucket name - `max-bckt`, region - **US East (Ohio)**.  
 3.2.c. No additional options.  
@@ -32,7 +33,7 @@ https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=
 ![Sshot 3](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/3_create_bucket.png "Sshot 3")  
 3.2.e. Check and create.  
 ![Sshot 4](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/4_manage_buckets.png "Sshot 4")  
-3.3. Send a file.  
+**3.3.** Send a file.  
 3.3.a. Open a bucket.  
 3.3.b. Press the "Upload" button.  
 3.3.c. Select and add the files (my screenshots).  
@@ -41,26 +42,34 @@ https://aws.amazon.com/getting-started/tutorials/backup-files-to-amazon-s3/?trk=
 ![Sshot 5](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/5_upload_files.png "Sshot 5")  
 3.3.f. Check and send.  
 ![Sshot 6](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/6_files_list.png "Sshot 6")  
-3.4. Extract an object.  
+**3.4.** Extract an object.  
 3.4.a. Mark a file and press the "Download" button.  
-3.5. Remove an object and a bucket.  
+**3.5.** Remove an object and a bucket.  
 3.5.a. Mark a file, select the "Actions-Delete" menu.  
 3.5.b. Check and confirm delete.  
 3.5.c. Go to the Amazon S3 to view all buckets.  
 3.5.d. Mark a bucket and press the "Delete" button, type its name to confirm.  
 
-:black_square_button: **4. Review the 10-minute example. Repeat the steps, create my own site.**  
+:white_check_mark: **4. Review the 10-minute example. Repeat the steps, create my own site.**  
 https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/  
-4.1. Create an Amazon Lightsail Account.  
-4.2. Create a WordPress instance in Lightsail.  
+**4.1.** Create an Amazon Lightsail Account.  
+**4.2.** Create a WordPress instance in Lightsail.  
 4.2.a. Sign into the Lightsail console.  
 4.2.b. On the Instances tab of the Lightsail home page, choose Create instance.  
-4.2.c. Choose the AWS Region and Availability Zone for your instance - **Frankfurt, Zone A (eu-central-1a)**.  
-4.2.d. Choose instance image Linux/Unix, WordPress. 
-4.2.e. Choose an instance plan 3,50 USD (512MB RAM, 1 vCPU, 20GB SSD, transfer 1TB), first month free.   
+4.2.c. Choose the AWS Region and Av Zone for your instance - **Frankfurt, Zone A (eu-central-1a)**.  
+4.2.d. Choose instance image Linux/Unix, WordPress.  
+4.2.e. Choose a plan 3,50 USD (512MB RAM, 1 vCPU, 20GB SSD, transfer 1TB), first month free.   
 4.2.f. Enter a name for instance - **`wp-max`**  
 4.2.g. Choose Create instance.  
 ![Sshot 7](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/7_wordpress_lightsail.png "Sshot 7")  
+**4.3.** Connect to WP instance via SSH and get the password for WordPress website.  
+4.3.a.Choose the SSH quick-connect icon for my WordPress instance.  
+4.3.b. `cat $HOME/bitnami_application_password`  
+4.3.c. Make note of the password displayed on the screen.  
+**4.4. Sign in to the administration dashboard of my WordPress website**
+4.4.a. `http://My-WP-IpAddress/wp-login.php`  
+4.4.b. Log into my instance.  
+![Sshot 8](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/8_wp_dashboard.png "Sshot 8")  
 
 :black_square_button: **5. Review the 10-minute example. Create my own domain and domain name for my site.**  
 https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls  
