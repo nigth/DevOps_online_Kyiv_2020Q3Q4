@@ -141,7 +141,37 @@ https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls
 `aws s3 rm s3://maxim-backup-bucket/mbackup.bak`  
 ![Sshot 16](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/16_s3_backup.png "Sshot 16")  
 
-:black_square_button: **7. Create a static site in S3, publicly available.** Post on the page my own photo,  
+:white_check_mark: **7. Create a static site in S3, publicly available.** Post on the page my own photo,  
 the name of the educational program and a list of AWS services with which I worked.  
+[Website Endpoints][https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html]
+[Hosting a static website on Amazon S3][https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html]  
+[How do I configure an S3 bucket for static website hosting][https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html]  
+[How to Host a Website on S3 Without Getting Lost in the Sea][https://medium.com/@kyle.galbraith/how-to-host-a-website-on-s3-without-getting-lost-in-the-sea-e2b82aa6cd38]  
+7.1. Create a bucket with the same as site name. Region **EU (Frankfurt)**.  
+7.2. Uncheck the "Block all public access" option, set Allow all.  
+![Sshot 17](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/17_create_site_bucket.png "Sshot 17")  
+
+7.3. In the Bucket name list - Choose Properties - Choose Static website hosting.  
+![Sshot 18](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/18_enable_stat_hosting.png "Sshot 18")  
+
+7.4. Upload site content to the bucket.  
+![Sshot 19](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/19_uploaded_content.png "Sshot 19")  
+
+7.5. Editing block public access settings for files and folders.  
+7.6. Adding a bucket policy to Allow the PublicReadGetObject.  
+![Sshot 20](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/20_bucket_policy.png "Sshot 20")  
+
+7.7. Test my website endpoint with Amazon provided URL:  
+![Sshot 21](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/21_endpoint_works.png "Sshot 21")  
+
+
+
+
+
+
+
+
+
+
 
 
