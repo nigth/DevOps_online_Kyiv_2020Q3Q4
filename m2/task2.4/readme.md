@@ -43,7 +43,14 @@ Go to the CloudWatch logs:
 **7.** Delete created Resources.  
 ![Sshot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/10_deleting_cluster.png "Sshot 10")  
 
-:negative_squared_cross_mark: **2. *(optional)* To change custom settings and run other application.**  
+:white_check_mark: **2. *(optional)* To change custom settings and run other application.**  
 
-  
+**TOMCAT-webserver** app:  
+![Sshot 11](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/11_tomcat_created.png "Sshot 11")  
+
+It runs, open public IP in other browser:  
+![Sshot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/11_tomcat_running.png "Sshot 12")  
+ 
+_The end._  
+
 
