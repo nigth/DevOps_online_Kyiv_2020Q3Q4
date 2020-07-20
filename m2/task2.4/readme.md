@@ -49,7 +49,7 @@ Go to the CloudWatch logs:
 ![Sshot 11](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/11_tomcat_created.png "Sshot 11")  
 
 It runs, open public IP in other browser:  
-![Sshot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/11_tomcat_running.png "Sshot 12")  
+![Sshot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/12_tomcat_running.png "Sshot 12")  
  
 _The end._  
 
