@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=blChPj05Los&list=PLg5SS_4L6LYsxrZ_4xE_U95AtGsIB9
 1.a. Open the Amazon ECS console first run wizard.  
 1.b. With Amazon ECS, I do not have Amazon ECR options, I skip to step 2.  
 
-**2.** Create a task definition. _Pay attention_. It is impossible to create EC2 based cluster using this guide,  
+**2.** Create a task definition. **Pay attention**. It is impossible to create EC2 based cluster using this guide,  
 because whatever you do - it uses only FARGATE compatible scheme:  
 https://console.aws.amazon.com/ecs/home#/firstRun  
 So get Started with Amazon Elastic Container Service (Amazon ECS) using **Fargate**.  
@@ -41,7 +41,7 @@ Go to the CloudWatch logs:
 ![Sshot 09](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/09_cloud_watch.png "Sshot 09")  
 
 **7.** Delete created Resources.  
-
+![Sshot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.4/pictures/10_deleting_cluster.png "Sshot 10")  
 
 :negative_squared_cross_mark: 2. *(optional)* To change custom settings and run other application.  
 
