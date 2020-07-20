@@ -90,7 +90,7 @@ https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/
 **4.6.** Create a Lightsail DNS zone and map a domain to your WordPress instance.  
 4.6.a. On the Networking tab of the Lightsail home page, choose Create DNS zone.  
 4.6.b. Enter my domain, then choose Create DNS zone.  
- _*You will need to configure your domain provider to use [Lightsail name servers][https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-how-to-create-dns-entry]_  
+ _*You will need to configure your domain provider to use [Lightsail name servers](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-how-to-create-dns-entry)_  
 4.6.с. Make note of the name server address listed on the page.  
 ![Sshot 11](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/11_dns_zone_created.png "Sshot 11")  
 
@@ -143,10 +143,10 @@ https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls
 
 :white_check_mark: **7. Create a static site in S3, publicly available.** Post on the page my own photo,  
 the name of the educational program and a list of AWS services with which I worked.  
-[Website Endpoints][https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html]  
-[Hosting a static website on Amazon S3][https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html]  
-[How do I configure an S3 bucket for static website hosting][https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html]  
-[How to Host a Website on S3 Without Getting Lost in the Sea][https://medium.com/@kyle.galbraith/how-to-host-a-website-on-s3-without-getting-lost-in-the-sea-e2b82aa6cd38]  
+[Website Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html)  
+[Hosting a static website on Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)  
+[How do I configure an S3 bucket for static website hosting](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html)  
+[How to Host a Website on S3 Without Getting Lost in the Sea](https://medium.com/@kyle.galbraith/how-to-host-a-website-on-s3-without-getting-lost-in-the-sea-e2b82aa6cd38)  
 7.1. Create a bucket with the same as site name. Region **EU (Frankfurt)**.  
 7.2. Uncheck the "Block all public access" option, set Allow all.  
 ![Sshot 17](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/17_create_site_bucket.png "Sshot 17")  
