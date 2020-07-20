@@ -143,7 +143,7 @@ https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls
 
 :white_check_mark: **7. Create a static site in S3, publicly available.** Post on the page my own photo,  
 the name of the educational program and a list of AWS services with which I worked.  
-[Website Endpoints][https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html]
+[Website Endpoints][https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html]  
 [Hosting a static website on Amazon S3][https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html]  
 [How do I configure an S3 bucket for static website hosting][https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html]  
 [How to Host a Website on S3 Without Getting Lost in the Sea][https://medium.com/@kyle.galbraith/how-to-host-a-website-on-s3-without-getting-lost-in-the-sea-e2b82aa6cd38]  
