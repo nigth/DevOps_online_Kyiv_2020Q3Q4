@@ -111,8 +111,35 @@ In the process of exploring the possibilities of creating my domain name for own
 I decided to use my existing domain name, registered in other registrant, different from AWS.
 On the previous sub-task 2.3.4, I transfered DNS-record for it and attached it to the WordPress blog.
 
-:black_square_button: **6. Review the example. Create a user AWS IAM, configure CLI AWS and upload files to S3.**  
+:white_check_mark: **6. Review the example. Create a user AWS IAM, configure CLI AWS and upload files to S3.**  
 https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls  
+**6.1.** Create an AWS IAM User.  
+6.1.a. Select IAM to open the Identity and Access Management dashboard.  
+6.1.b. From the AWS Identity and Access Management dashboard, click on Users on the left side.  
+6.1.c. Click the Add user button.  
+6.1.d. Enter a user name in the textbox next to _User name_ and select _Programmatic access_.  
+6.1.e. Click on Attach existing policies directly option. Select _AdministratorAccess_.  
+6.1.f. Review and click on Create user.  
+6.1.g. Click the Download button and save the credentials.csv file.  
+![Sshot 14](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/14_user_created.png "Sshot 14")  
+
+**6.2.** Install and Configure the AWS CLI.  
+6.2.a. Follow the directions for installing the AWS CLI bundled installer.  
+6.2.b. Open a terminal window.  
+6.2.c. Region - **eu-central-1**  
+`aws configure`  
+![Sshot 15](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/15_aws_conf.png "Sshot 15")  
+
+**6.3.** Using the AWS CLI with Amazon S3.  
+6.3.a. Create a new bucket:  
+`aws s3 mb s3://maxim-backup-bucket`  
+6.3.b. Upload the file located in the local directory:  
+`aws s3 cp ~/temp/mbackup.bak s3://maxim-backup-bucket/`  
+6.3.c. Download file from S3 to the local directory:  
+`aws s3 cp s3://maxim-backup-bucket/mbackup.bak ./`  
+6.3.d. Delete file from bucket:  
+`aws s3 rm s3://maxim-backup-bucket/mbackup.bak`  
+![Sshot 16](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/16_s3_backup.png "Sshot 16")  
 
 :black_square_button: **7. Create a static site in S3, publicly available.** Post on the page my own photo,  
 the name of the educational program and a list of AWS services with which I worked.  
