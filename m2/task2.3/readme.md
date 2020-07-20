@@ -104,6 +104,10 @@ https://aws.amazon.com/ru/getting-started/tutorials/launch-a-wordpress-website/
 **4.7.** Modify main page and create my own site:  
 ![Sshot 13](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/13_my_wp_site.png "Sshot 13")  
 
+**http://myv.pp.ua/**  
+
+You are welcome!  
+
 :white_check_mark: **5. Review the 10-minute example.**
 Explore the possibilities of creating my own domain and domain name for my site.  
 https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls  
@@ -164,7 +168,9 @@ the name of the educational program and a list of AWS services with which I work
 7.7. Test my website endpoint with Amazon provided URL:  
 ![Sshot 21](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m2/task2.3/shots/21_endpoint_works.png "Sshot 21")  
 
+**http://www.myv.pp.ua.s3-website.eu-central-1.amazonaws.com/**  
 
+You are welcome!  
 
 
 
