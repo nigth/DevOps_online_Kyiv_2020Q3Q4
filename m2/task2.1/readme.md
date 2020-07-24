@@ -32,3 +32,4 @@ A SolusVM solution is a control center for the KVM, Xen и OpenVZ managing.
 As for budget, the VMware based solutions are most expensive then others.  
 MS Hyper-V just a little more chippest, but don't has a Fault Tolerance.  
 And KVM is free, but has no support - only open source comunity can help you.  
+ 
