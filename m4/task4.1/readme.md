@@ -19,8 +19,7 @@
 ![ScrShot 03](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/03.png "ScrShot 03")  
 **7.** Watched info about packets in accordance with OSI model.  
 ![ScrShot 04](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/04.png "ScrShot 04")  
-**Analyzed situation:**  
-- FastEthernet0 receives the frame.
+**Analyzed situation:** FastEthernet0 receives the frame.  
 **8.** Deleted IP addresses from PC0-PC3 and saw, that network doesn't work. Repeated points 5-7:  
 **8.5.** Simulated ICMP from PC1 to PC2, capture and play - packets don't go.  
 ![ScrShot 05](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/05.png "ScrShot 05")  
