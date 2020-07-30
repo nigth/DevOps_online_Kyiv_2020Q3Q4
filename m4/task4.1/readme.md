@@ -4,6 +4,7 @@
 2. Saved project as `task4.1.pkt`  
 ![ScreenShot 01](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/01.png "ScreenShot 01")  
 3. Assigned IP addresses for PCs.  
+
 | PC | IP | MASK |
 |:--:|:--:|:----:|
 |PC0|192.168.0.1|255.255.255.0|
