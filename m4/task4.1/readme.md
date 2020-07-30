@@ -11,6 +11,7 @@
 |PC1|192.168.0.2|255.255.255.0|
 |PC2|192.168.0.3|255.255.255.0|
 |PC3|192.168.0.4|255.255.255.0|
+
 **4.** Checked the network using Simple PDU from PC1 to PC2 - it works.  
 **5.** Simulated ICMP from PC1 to PC2, capture and play.  
 ![ScrShot 02](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/02.png "ScrShot 02")  
@@ -45,6 +46,7 @@
 |Server|192.168.0.5|255.255.255.0|
 |PC4|192.168.0.6|255.255.255.0|
 |PC5|192.168.0.7|255.255.255.0|
+
 **11.** Checked the network using Simple PDU from PC1 to PC4 - it works.  
 ![ScrShot 09](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/09.png "ScrShot 09")  
 **12.**  
