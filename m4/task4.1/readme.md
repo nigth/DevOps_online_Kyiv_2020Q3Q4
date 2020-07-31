@@ -8,8 +8,8 @@
 
 **3.** Assigned IP addresses for PCs.  
 
-| Host | IP | MASK |
-|:--:|:--:|:----:|
+| Host | IP | Mask |
+|:----:|:--:|:----:|
 |PC0|192.168.0.1|255.255.255.0|
 |PC1|192.168.0.2|255.255.255.0|
 |PC2|192.168.0.3|255.255.255.0|
@@ -49,13 +49,13 @@
 
 **10.** Assigned IP addresses for hosts.   
 
-| Host | IP | MASK |
-|:--:|:--:|:----:|
+| Host | IP | Mask |
+|:----:|:--:|:----:|
 |PC0|192.168.0.1|255.255.255.0|
 |PC1|192.168.0.2|255.255.255.0|
 |PC2|192.168.0.3|255.255.255.0|
 |PC3|192.168.0.4|255.255.255.0|
-|Server|192.168.0.5|255.255.255.0|
+|**Server**|**192.168.0.5**|255.255.255.0|
 |PC4|192.168.0.6|255.255.255.0|
 |PC5|192.168.0.7|255.255.255.0|
 
@@ -68,8 +68,8 @@
 
 **13.3.** Assigned IP addresses for PCs.  
 
-| Host | IP | MASK |
-|:--:|:--:|:----:|
+| Host | IP | Mask |
+|:----:|:--:|:----:|
 |PC0|192.168.0.1|255.255.255.0|
 |PC1|192.168.0.2|255.255.255.0|
 |PC2|192.168.0.3|255.255.255.0|
@@ -94,8 +94,8 @@
 
 **16.** Assigned IP addresses for PCs.  
 
-| Host | IP | MASK |
-|:--:|:--:|:----:|
+| Host | IP | Mask |
+|:----:|:--:|:----:|
 |PC0|192.168.0.1|255.255.255.0|
 |PC1|192.168.0.2|255.255.255.0|
 |PC2|192.168.0.3|255.255.255.0|
@@ -108,16 +108,42 @@
 **17.** Checked network using Simple PDU from PC3 to PC7, it works: **`FastEthernet0 receives the frame.`**  
 ![ScrShot 11](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/11.png "ScrShot 11")  
 
-**18.**  
+**18.** Splitted the network in two by Router-PT with Fiber.  
 
-**19.**  
+**19.** Change assigned IP addresses for РС4 – РС7 to others.  
 
-**20.**  
+| Host | IP | Mask |
+|:----:|:--:|:----:|
+|PC0|192.168.0.1|255.255.255.0|
+|PC1|192.168.0.2|255.255.255.0|
+|PC2|192.168.0.3|255.255.255.0|
+|PC3|192.168.0.4|255.255.255.0|
+|PC4|**192.168.1.1**|255.255.255.0|
+|PC5|**192.168.1.2**|255.255.255.0|
+|PC6|**192.168.1.3**|255.255.255.0|
+|PC7|**192.168.1.4**|255.255.255.0|
 
-**21.**  
+**20.** Turned on router's ports and assigned them IP addresses.  
 
-**22.**  
+| Port | IP | Mask |
+|:----:|:--:|:----:|
+|FE4/0|192.168.0.10|255.255.255.0|
+|FE4/1|192.168.1.10|255.255.255.0|
 
-**23.**  
+Save the router configuration in CLI using command `write` or `copy running-config startup-config`.  
+
+**21.** Assigned a gateway for PCs.  
+
+| Host | Gateway IP |
+|:----:|:--:|
+|PC0 - PC3|192.168.0.10|
+|PC4 - PC5|192.168.1.10|
+
+**22.** Checked network using Simple PDU from PC2 to PC6, it works: **`FastEthernet0 receives the frame.`**  
+![ScrShot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/12png "ScrShot 12")  
+
+**23.** The main difference between Topology 4 and Topology 6 is that with Router we use two different IP ranges in subnets. And a router provide to ICMP packets a correct destination to the host in other subnet. It opened for us a lot of possibilities for Network segmentation, for more security, and for best performance (instead of using the one big network), etc.  
+ 
+_Thanks for your time!_  
  
 
