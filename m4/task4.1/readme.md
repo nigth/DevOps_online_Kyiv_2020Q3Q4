@@ -62,23 +62,31 @@
 **11.** Checked the network using Simple PDU from PC1 to PC4 - it works.  
 ![ScrShot 09](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/09.png "ScrShot 09")  
 
-**12.** Created project from 4 PCs and a Switch.  
+**12.** Created project from 4 PCs and a Switch Catalyst 2950-24.  
 
-**13.** Repeated steps 3-8:  
+**13.** Repeated steps 3-7:  
 
-**13.3**  
+**13.3**Assigned IP addresses for PCs.  
 
-**13.4**  
+| Host | IP | MASK |
+|:--:|:--:|:----:|
+|PC0|192.168.0.1|255.255.255.0|
+|PC1|192.168.0.2|255.255.255.0|
+|PC2|192.168.0.3|255.255.255.0|
+|PC3|192.168.0.4|255.255.255.0|  
 
-**13.5**  
+**13.4** Checked the network using Simple PDU from PC2 to PC3 - it works.  
 
-**13.6**  
+**13.5** Simulated ICMP from PC2 to PC3, capture and play.  
 
-**13.7**  
+**13.6** Watched the ICMP packets in a Simulation Panel.  
 
-**13.8**  
+**13.7** Watched info about packets in accordance with OSI model.  
+![ScrShot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/10.png "ScrShot 10")  
 
-**Analyzed differnce between topology 1 (with a Hub) and topology 3 (with a Switch):**  
+**Analyzed difference between topology 1 (with a Hub) and topology 3 (with a Switch):**  
+- instead of ICMP packets, we can see another protocols working: ARP, STP, DTP.  
+- the ICMP packets aren't broadcasting, a switch delivers them only to one destination.  
 
 **14.**  
 
