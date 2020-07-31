@@ -66,35 +66,47 @@
 
 **13.** Repeated steps 3-7:  
 
-**13.3**Assigned IP addresses for PCs.  
+**13.3.** Assigned IP addresses for PCs.  
 
 | Host | IP | MASK |
 |:--:|:--:|:----:|
 |PC0|192.168.0.1|255.255.255.0|
 |PC1|192.168.0.2|255.255.255.0|
 |PC2|192.168.0.3|255.255.255.0|
-|PC3|192.168.0.4|255.255.255.0|  
+|PC3|192.168.0.4|255.255.255.0|
 
-**13.4** Checked the network using Simple PDU from PC2 to PC3 - it works.  
+**13.4.** Checked the network using Simple PDU from PC2 to PC3 - it works.  
 
-**13.5** Simulated ICMP from PC2 to PC3, capture and play.  
+**13.5.** Simulated ICMP from PC2 to PC3, capture and play.  
 
-**13.6** Watched the ICMP packets in a Simulation Panel.  
+**13.6.** Watched the ICMP packets in a Simulation Panel.  
 
-**13.7** Watched info about packets in accordance with OSI model.  
+**13.7.** Watched info about packets in accordance with OSI model.  
 ![ScrShot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/10.png "ScrShot 10")  
 
 **Analyzed difference between topology 1 (with a Hub) and topology 3 (with a Switch):**  
 - instead of ICMP packets, we can see another protocols working: ARP, STP, DTP.  
 - the ICMP packets aren't broadcasting, a switch delivers them only to one destination.  
 
-**14.**  
+**14.** Expanded project to 8 PCs and 2 Switches.  
 
-**15.**  
+**15.** Added ports on the switches in a Physical tab.  
 
-**16.**  
+**16.** Assigned IP addresses for PCs.  
 
-**17.**  
+| Host | IP | MASK |
+|:--:|:--:|:----:|
+|PC0|192.168.0.1|255.255.255.0|
+|PC1|192.168.0.2|255.255.255.0|
+|PC2|192.168.0.3|255.255.255.0|
+|PC3|192.168.0.4|255.255.255.0|
+|PC4|192.168.0.5|255.255.255.0|
+|PC5|192.168.0.6|255.255.255.0|
+|PC6|192.168.0.7|255.255.255.0|
+|PC7|192.168.0.8|255.255.255.0|
+
+**17.** Checked network using Simple PDU from PC3 to PC7, it works: **`FastEthernet0 receives the frame.`**  
+![ScrShot 11](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/11.png "ScrShot 11")  
 
 **18.**  
 
