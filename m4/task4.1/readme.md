@@ -140,7 +140,7 @@ Save the router configuration in CLI using command `write` or `copy running-conf
 |PC4 - PC5|192.168.1.10|
 
 **22.** Checked network using Simple PDU from PC2 to PC6, it works: **`FastEthernet0 receives the frame.`**  
-![ScrShot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/12png "ScrShot 12")  
+![ScrShot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.1/shots/12.png "ScrShot 12")  
 
 **23.** The main difference between Topology 4 and Topology 6 is that with Router we use two different IP ranges in subnets. And a router provide to ICMP packets a correct destination to the host in other subnet. It opened for us a lot of possibilities for Network segmentation, for more security, and for best performance (instead of using the one big network), etc.  
  
