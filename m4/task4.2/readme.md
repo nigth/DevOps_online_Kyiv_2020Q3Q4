@@ -204,6 +204,7 @@ Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLANs:
 
 Configured routing on Router-1:  
 http://routeworld.ru/set-i-internet/web_practice/page,3,166-staticheskaya-marshrutizaciya-na-cisco.html  
+For the 1st floor A:  
 ```
 Router1>enable
 Router1#conf t
@@ -226,6 +227,7 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 ```
+For the 2nd floor B:  
 ```
 Router1>enable
 Router1#conf t
@@ -246,6 +248,19 @@ Building configuration...
 Router1#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
+```
+For the 3rd floor C:  
+```
+Router1(config)#interface fastEthernet8/0.15
+Router1(config-subif)#encapsulation dot1Q 15
+Router1(config-subif)#ip address 192.168.5.1 255.255.255.0
+
+Router1(config)#interface fastEthernet 8/0.16
+Router1(config-subif)#encapsulation dot1Q 16
+Router1(config-subif)#ip address 192.168.6.1 255.255.255.0
+
+Router1#write
+Router1#copy running-config startup-config
 ```
 Configured VLANs on switches:  
 http://routeworld.ru/set-i-internet/web_practice/page,4,166-staticheskaya-marshrutizaciya-na-cisco.html  
@@ -308,6 +323,7 @@ Building configuration...
 ```
 Checked how network works on Floor A between groups A1 and A2 - Ok!  
 ![ScrShot 04](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/04.png "ScrShot 04")  
+
 Switch-B:  
 ```
 SwitchB>enable
@@ -367,31 +383,65 @@ Building configuration...
 Checked how network works on Floor B between groups B1 and B2 - Ok!  
 ![ScrShot 05](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/05.png "ScrShot 05")  
 
-Created simple PDU for to pairs of PCs: A1-PC1 -> B2-PC2; B2-PC5 -> A1-PC3.  
+Created simple PDU for two pairs of PCs: A1-PC1 -> B2-PC2; B2-PC5 -> A1-PC3.  
 Checked how network works between Floor A and Floor B. All modeling were successful!  
 ![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/06.png "ScrShot 06")  
+
 Switch-C:  
 ```
+SwitchC(config)#vlan 15
+SwitchC(config-vlan)#interface vlan 15
+SwitchC(config-if)#ip address 192.168.5.1 255.255.255.0
+SwitchC(config)#vlan 16
+SwitchC(config-vlan)#interface vlan 16
+SwitchC(config-if)#ip address 192.168.6.1 255.255.255.0
 
+SwitchC(config)#interface FastEthernet1/1
+SwitchC(config-if)#switchport access vlan 15
+SwitchC(config-if)#interface FastEthernet2/1
+SwitchC(config-if)#switchport access vlan 15
+SwitchC(config-if)#interface FastEthernet3/1
+SwitchC(config-if)#switchport access vlan 15
+
+SwitchC(config-if)#interface FastEthernet4/1
+SwitchC(config-if)#switchport access vlan 16
+SwitchC(config-if)#interface FastEthernet5/1
+SwitchC(config-if)#switchport access vlan 16
+SwitchC(config-if)#interface FastEthernet6/1
+SwitchC(config-if)#switchport access vlan 16
+SwitchC(config-if)#interface FastEthernet7/1
+SwitchC(config-if)#switchport access vlan 16
+SwitchC(config-if)#interface FastEthernet8/1
+SwitchC(config-if)#switchport access vlan 16
+
+SwitchC(config)#interface fastEthernet0/1
+SwitchC(config-if)#switchport mode trunk
+SwitchC(config-if)#switchport trunk allowed vlan 15-16
+
+SwitchC#write
+SwitchC#copy running-config startup-config
 ```
 Checked how network works on Floor C between groups C1 and C2 - Ok!  
+![ScrShot 07](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/07.png "ScrShot 07")  
 
 Switch-D:  
 ```
 
 ```
 Checked how network works on Floor D between groups D1 and D2 - Ok!  
-![ScrShot 07](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/07.png "ScrShot 07")  
+![ScrShot 08](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/08.png "ScrShot 08")  
 
+Created simple PDU for two pairs of PCs: C1-PC1 -> D2-PC2; D2-PC5 -> C1-PC3.  
+Checked how network works between Floor C and Floor D. All modeling were successful!  
+![ScrShot 09](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/09.png "ScrShot 09")  
 
+Analyzed how all networks are orking. Checked connection randomly crosswide everywhere:  
+![ScrShot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/10.png "ScrShot 10")  
 ___
 
 **3.** Created a model of enterprise network. There are 5 buildings with 1 floor. Each of buildings has 1 workgroup with 6 computers. The network is based on the 1-port router. Saved project as `max-4-2-3.pkt`  
 
-![ScrShot 05](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/05.png "ScrShot 05")  
 
-
-![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/06.png "ScrShot 06")  
 ___
 
 _Thanks for your time!_  
