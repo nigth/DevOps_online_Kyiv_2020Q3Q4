@@ -262,6 +262,19 @@ Router1(config-subif)#ip address 192.168.6.1 255.255.255.0
 Router1#write
 Router1#copy running-config startup-config
 ```
+For the 4th floor D:  
+```
+Router1(config)#interface fastEthernet9/0.17
+Router1(config-subif)#encapsulation dot1Q 17
+Router1(config-subif)#ip address 192.168.7.1 255.255.255.0
+
+Router1(config)#interface fastEthernet 9/0.18
+Router1(config-subif)#encapsulation dot1Q 18
+Router1(config-subif)#ip address 192.168.8.1 255.255.255.0
+
+Router1#write
+Router1#copy running-config startup-config
+```
 Configured VLANs on switches:  
 http://routeworld.ru/set-i-internet/web_practice/page,4,166-staticheskaya-marshrutizaciya-na-cisco.html  
 Switch-A:  
@@ -426,13 +439,43 @@ Checked how network works on Floor C between groups C1 and C2 - Ok!
 
 Switch-D:  
 ```
+SwitchD(config)#vlan 17
+SwitchD(config-vlan)#interface vlan 17
+SwitchD(config-if)#ip address 192.168.7.1 255.255.255.0
+SwitchD(config)#vlan 18
+SwitchD(config-vlan)#interface vlan 18
+SwitchD(config-if)#ip address 192.168.8.1 255.255.255.0
 
+SwitchD(config)#interface FastEthernet1/1
+SwitchD(config-if)#switchport access vlan 17
+SwitchD(config-if)#interface FastEthernet2/1
+SwitchD(config-if)#switchport access vlan 17
+SwitchD(config-if)#interface FastEthernet3/1
+SwitchD(config-if)#switchport access vlan 17
+
+SwitchD(config-if)#interface FastEthernet4/1
+SwitchD(config-if)#switchport access vlan 18
+SwitchD(config-if)#interface FastEthernet5/1
+SwitchD(config-if)#switchport access vlan 18
+SwitchD(config-if)#interface FastEthernet6/1
+SwitchD(config-if)#switchport access vlan 18
+SwitchD(config-if)#interface FastEthernet7/1
+SwitchD(config-if)#switchport access vlan 18
+SwitchD(config-if)#interface FastEthernet8/1
+SwitchD(config-if)#switchport access vlan 18
+
+SwitchD(config)#interface fastEthernet0/1
+SwitchD(config-if)#switchport mode trunk
+SwitchD(config-if)#switchport trunk allowed vlan 17-18
+
+SwitchD#write
+SwitchD#copy running-config startup-config
 ```
-Checked how network works on Floor D between groups D1 and D2 - Ok!  
+Checked how network works on Floor D between groups D1 and D2  
 ![ScrShot 08](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/08.png "ScrShot 08")  
 
 Created simple PDU for two pairs of PCs: C1-PC1 -> D2-PC2; D2-PC5 -> C1-PC3.  
-Checked how network works between Floor C and Floor D. All modeling were successful!  
+Checked how network works between Floor C and Floor D  
 ![ScrShot 09](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/09.png "ScrShot 09")  
 
 Analyzed how all networks are orking. Checked connection randomly crosswide everywhere:  
