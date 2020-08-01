@@ -366,12 +366,16 @@ Building configuration...
 ```
 Checked how network works on Floor B between groups B1 and B2 - Ok!  
 ![ScrShot 05](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/05.png "ScrShot 05")  
+
+Created simple PDU for to pairs of PCs: A1-PC1 -> B2-PC2; B2-PC5 -> A1-PC3.  
+Checked how network works between Floor A and Floor B. All modeling were successful!  
+![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/06.png "ScrShot 06")  
 Switch-C:  
 ```
 
 ```
 Checked how network works on Floor C between groups C1 and C2 - Ok!  
-![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/06.png "ScrShot 06")  
+
 Switch-D:  
 ```
 
