@@ -154,7 +154,7 @@ Group C2 (5 PCs): 192.168.6.0/24
 Group D1 (3 PCs): 192.168.7.0/24  
 Group D2 (5 PCs): 192.168.8.0/24  
 
-Configured VLANs on switches and assigned IP addresses (mask 255.255.255.0):  
+Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLAns:  
 
 | Host | IP | Gateway | VLAN | Switch | Port |
 |:----:|:--:|:-------:|:----:|:------:|:----:|
@@ -200,6 +200,112 @@ Configured VLANs on switches and assigned IP addresses (mask 255.255.255.0):
 
 ![ScrShot 03](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/03.png "ScrShot 03")  
 
+Configured VLANs on switches:  
+http://routeworld.ru/set-i-internet/web_practice/page,4,166-staticheskaya-marshrutizaciya-na-cisco.html  
+Switch-A:  
+```
+SwitchA(config)#vlan 11
+VLAN 11 added:
+    Name: VLAN0011
+SwitchA(vlan)#vlan 12
+VLAN 12 added:
+    Name: VLAN0012
+SwitchA(vlan)#exit
+Switch#conf t
+
+SwitchA(config)#interface FastEthernet1/1
+SwitchA(config-if)#switchport access vlan 11
+SwitchA(vlan)#exit
+SwitchA(config)#interface FastEthernet2/1
+SwitchA(config-if)#switchport access vlan 11
+SwitchA(vlan)#exit
+SwitchA(config)#interface FastEthernet3/1
+SwitchA(config-if)#switchport access vlan 11
+SwitchA(vlan)#exit
+
+SwitchA(config)#interface FastEthernet4/1
+SwitchA(config-if)#switchport access vlan 12
+SwitchA(config-if)#exit
+SwitchA(config)#interface FastEthernet5/1
+SwitchA(config-if)#switchport access vlan 12
+SwitchA(config-if)#exit
+SwitchA(config)#interface FastEthernet6/1
+SwitchA(config-if)#switchport access vlan 12
+SwitchA(config-if)#exit
+SwitchAconfig)#interface FastEthernet7/1
+SwitchA(config-if)#switchport access vlan 12
+SwitchA(config-if)#exit
+SwitchA(config)#interface FastEthernet8/1
+SwitchA(config-if)#switchport access vlan 12
+SwitchA(config-if)#exit
+SwitchA(config)#exit
+SwitchA#write
+Building configuration...
+[OK]
+
+SwitchA>enable
+SwitchA#conf t
+SwitchA(config)#interface vlan 11
+SwitchA(config-if)#ip address 192.168.1.1 255.255.255.0
+SwitchA(config-if)#exit
+SwitchA(config)#interface vlan 12
+SwitchA(config-if)#ip address 192.168.2.1 255.255.255.0
+SwitchA(config-if)#exit
+
+SwitchA(config)#exit
+SwitchA#write
+Building configuration...
+[OK]
+
+SwitchA(config)#interface fastEthernet0/1
+SwitchA(config-if)#switchport mode trunk
+SwitchA(config-if)#switchport trunk allowed vlan 11-12
+SwitchA(config-if)#exit
+
+SwitchA(config)#exit
+SwitchA#write
+Building configuration...
+[OK]
+SwitchA#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+```
+Switch-B:  
+```
+
+```
+Switch-C:  
+```
+
+```
+Switch-D:  
+```
+
+```
+Configured routing on Router-1:  
+http://routeworld.ru/set-i-internet/web_practice/page,3,166-staticheskaya-marshrutizaciya-na-cisco.html  
+```
+Router1(config)#interface fastEthernet6/0.11
+Router1(config-subif)#encapsulation dot1Q 11
+Router1(config-subif)#ip address 192.168.1.1 255.255.255.0
+Router1(config-subif)#exit
+
+Router1(config)#interface fastEthernet 6/0.12
+Router1(config-subif)#encapsulation dot1Q 12
+Router1(config-subif)#ip address 192.168.2.1 255.0.0.0
+Router1(config-subif)#exit
+
+Router1(config)#exit
+Router1#write
+Building configuration...
+[OK]
+Router1#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+```
 
 ![ScrShot 04](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/04.png "ScrShot 04")  
 
