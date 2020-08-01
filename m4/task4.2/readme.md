@@ -1,5 +1,6 @@
 ## Task 4.2
-### Module 4. Networking Fundamentals
+### Module 4. Networking Fundamental
+___
 
 **1.** Created a model of enterprise network. There are 2 buildings with 2 floors.  
 Each of workgroups on the floor has 5 computers. Saved project as `max-4-2-1.pkt`  
@@ -137,6 +138,7 @@ Reply from 192.168.11.15: bytes=32 time<1ms TTL=126
 ...
 ```
 ![ScrShot 02](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/02.png "ScrShot 02")  
+___
 
 **2.** Created a model of enterprise network. There is 1 building with 4 floors.  
 On each floors the are 2 groups with 3 and 5 computers. Saved project as `max-4-2-2.pkt`  
@@ -154,7 +156,7 @@ Group C2 (5 PCs): 192.168.6.0/24
 Group D1 (3 PCs): 192.168.7.0/24  
 Group D2 (5 PCs): 192.168.8.0/24  
 
-Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLAns:  
+Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLANs:  
 
 | Host | IP | Gateway | VLAN | Switch | Port |
 |:----:|:--:|:-------:|:----:|:------:|:----:|
@@ -200,6 +202,51 @@ Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLAns:
 
 ![ScrShot 03](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/03.png "ScrShot 03")  
 
+Configured routing on Router-1:  
+http://routeworld.ru/set-i-internet/web_practice/page,3,166-staticheskaya-marshrutizaciya-na-cisco.html  
+```
+Router1>enable
+Router1#conf t
+Router1(config)#interface fastEthernet6/0.11
+Router1(config-subif)#encapsulation dot1Q 11
+Router1(config-subif)#ip address 192.168.1.1 255.255.255.0
+Router1(config-subif)#exit
+
+Router1(config)#interface fastEthernet 6/0.12
+Router1(config-subif)#encapsulation dot1Q 12
+Router1(config-subif)#ip address 192.168.2.1 255.255.255.0
+Router1(config-subif)#exit
+
+Router1(config)#exit
+Router1#write
+Building configuration...
+[OK]
+Router1#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+```
+```
+Router1>enable
+Router1#conf t
+Router1(config)#interface fastEthernet7/0.13
+Router1(config-subif)#encapsulation dot1Q 13
+Router1(config-subif)#ip address 192.168.3.1 255.255.255.0
+Router1(config-subif)#exit
+
+Router1(config)#interface fastEthernet 7/0.14
+Router1(config-subif)#encapsulation dot1Q 14
+Router1(config-subif)#ip address 192.168.4.1 255.255.255.0
+Router1(config-subif)#exit
+
+Router1(config)#exit
+Router1#write
+Building configuration...
+[OK]
+Router1#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+```
 Configured VLANs on switches:  
 http://routeworld.ru/set-i-internet/web_practice/page,4,166-staticheskaya-marshrutizaciya-na-cisco.html  
 Switch-A:  
@@ -211,7 +258,6 @@ SwitchA(vlan)#vlan 12
 VLAN 12 added:
     Name: VLAN0012
 SwitchA(vlan)#exit
-Switch#conf t
 
 SwitchA(config)#interface FastEthernet1/1
 SwitchA(config-if)#switchport access vlan 11
@@ -238,24 +284,13 @@ SwitchA(config-if)#exit
 SwitchA(config)#interface FastEthernet8/1
 SwitchA(config-if)#switchport access vlan 12
 SwitchA(config-if)#exit
-SwitchA(config)#exit
-SwitchA#write
-Building configuration...
-[OK]
 
-SwitchA>enable
-SwitchA#conf t
 SwitchA(config)#interface vlan 11
 SwitchA(config-if)#ip address 192.168.1.1 255.255.255.0
 SwitchA(config-if)#exit
 SwitchA(config)#interface vlan 12
 SwitchA(config-if)#ip address 192.168.2.1 255.255.255.0
 SwitchA(config-if)#exit
-
-SwitchA(config)#exit
-SwitchA#write
-Building configuration...
-[OK]
 
 SwitchA(config)#interface fastEthernet0/1
 SwitchA(config-if)#switchport mode trunk
@@ -270,45 +305,82 @@ SwitchA#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
-
 ```
+Checked how network works on Floor A between groups A1 and A2 - Ok!  
+![ScrShot 04](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/04.png "ScrShot 04")  
 Switch-B:  
 ```
+SwitchB>enable
+SwitchB#conf t
+SwitchB(config)#vlan 13
+SwitchB(config-vlan)#exit
+SwitchB(config)#vlan 14
+SwitchB(config-vlan)#exit
 
-```
-Switch-C:  
-```
+SwitchB(config)#interface FastEthernet1/1
+SwitchB(config-if)#switchport access vlan 13
+SwitchB(config-if)#exit
+SwitchB(config)#interface FastEthernet2/1
+SwitchB(config-if)#switchport access vlan 13
+SwitchB(config-if)#exit
+SwitchB(config)#interface FastEthernet3/1
+SwitchB(config-if)#switchport access vlan 13
+SwitchB(config-if)#exit
 
-```
-Switch-D:  
-```
+SwitchB(config)#interface FastEthernet4/1
+SwitchB(config-if)#switchport access vlan 14
+SwitchB(config-if)#exit
+SwitchB(config)#interface FastEthernet5/1
+SwitchB(config-if)#switchport access vlan 14
+SwitchB(config-if)#exit
+SwitchB(config)#interface FastEthernet6/1
+SwitchB(config-if)#switchport access vlan 14
+SwitchB(config-if)#exit
+SwitchBconfig)#interface FastEthernet7/1
+SwitchB(config-if)#switchport access vlan 14
+SwitchB(config-if)#exit
+SwitchB(config)#interface FastEthernet8/1
+SwitchB(config-if)#switchport access vlan 14
+SwitchB(config-if)#exit
 
-```
-Configured routing on Router-1:  
-http://routeworld.ru/set-i-internet/web_practice/page,3,166-staticheskaya-marshrutizaciya-na-cisco.html  
-```
-Router1(config)#interface fastEthernet6/0.11
-Router1(config-subif)#encapsulation dot1Q 11
-Router1(config-subif)#ip address 192.168.1.1 255.255.255.0
-Router1(config-subif)#exit
+SwitchB(config)#interface vlan 13
+SwitchB(config-if)#ip address 192.168.3.1 255.255.255.0
+SwitchB(config-if)#exit
+SwitchB(config)#interface vlan 14
+SwitchB(config-if)#ip address 192.168.4.1 255.255.255.0
+SwitchB(config-if)#exit
 
-Router1(config)#interface fastEthernet 6/0.12
-Router1(config-subif)#encapsulation dot1Q 12
-Router1(config-subif)#ip address 192.168.2.1 255.0.0.0
-Router1(config-subif)#exit
+SwitchB(config)#interface fastEthernet0/1
+SwitchB(config-if)#switchport mode trunk
+SwitchB(config-if)#switchport trunk allowed vlan 13-14
+SwitchB(config-if)#exit
 
-Router1(config)#exit
-Router1#write
+SwitchB(config)#exit
+SwitchB#write
 Building configuration...
 [OK]
-Router1#copy running-config startup-config
+SwitchB#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
 ```
+Checked how network works on Floor B between groups B1 and B2 - Ok!  
+![ScrShot 05](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/05.png "ScrShot 05")  
+Switch-C:  
+```
 
-![ScrShot 04](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/04.png "ScrShot 04")  
+```
+Checked how network works on Floor C between groups C1 and C2 - Ok!  
+![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/06.png "ScrShot 06")  
+Switch-D:  
+```
 
+```
+Checked how network works on Floor D between groups D1 and D2 - Ok!  
+![ScrShot 07](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/07.png "ScrShot 07")  
+
+
+___
 
 **3.** Created a model of enterprise network. There are 5 buildings with 1 floor. Each of buildings has 1 workgroup with 6 computers. The network is based on the 1-port router. Saved project as `max-4-2-3.pkt`  
 
@@ -316,6 +388,7 @@ Building configuration...
 
 
 ![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/06.png "ScrShot 06")  
+___
 
 _Thanks for your time!_  
 
