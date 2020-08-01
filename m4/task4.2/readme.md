@@ -154,62 +154,49 @@ Group C2 (5 PCs): 192.168.6.0/24
 Group D1 (3 PCs): 192.168.7.0/24  
 Group D2 (5 PCs): 192.168.8.0/24  
 
-**RIP** table on a Router-1 consists all our networks:  
-192.168.1.0  
-192.168.2.0  
-192.168.3.0  
-192.168.4.0  
-192.168.5.0  
-192.168.6.0  
-192.168.7.0  
-192.168.8.0  
+Configured VLANs on switches and assigned IP addresses (mask 255.255.255.0):  
 
-Assigned IP addresses for computers (mask is everything 255.255.255.0):
-
-| Host | IP |Gateway|
-|:----:|:--:|:-----:|
-|F1-G1-P1|192.168.1.11|192.168.1.1|
-|F1-G1-P2|192.168.1.12|192.168.1.1|
-|F1-G1-P3|192.168.1.13|192.168.1.1|
+| Host | IP | Gateway | VLAN | Switch | Port |
+|:----:|:--:|:-------:|:----:|:------:|:----:|
+|A1-PC1|192.168.1.11|192.168.1.1|VLAN11|Switch-A|FastEthernet1/1|
+|A1-PC2|192.168.1.12|192.168.1.1|VLAN11|Switch-A|FastEthernet2/1|
+|A1-PC3|192.168.1.13|192.168.1.1|VLAN11|Switch-A|FastEthernet3/1|
 | | | |
-|F1-G2-P1|192.168.2.11|192.168.1.1|
-|F1-G2-P2|192.168.2.12|192.168.1.1|
-|F1-G2-P3|192.168.2.13|192.168.1.1|
-|F1-G2-P4|192.168.2.14|192.168.1.1|
-|F1-G2-P5|192.168.2.15|192.168.1.1|
+|A2-PC1|192.168.2.11|192.168.2.1|VLAN12|Switch-A|FastEthernet4/1|
+|A2-PC2|192.168.2.12|192.168.2.1|VLAN12|Switch-A|FastEthernet5/1|
+|A2-PC3|192.168.2.13|192.168.2.1|VLAN12|Switch-A|FastEthernet6/1|
+|A2-PC4|192.168.2.14|192.168.2.1|VLAN12|Switch-A|FastEthernet7/1|
+|A2-PC5|192.168.2.15|192.168.2.1|VLAN12|Switch-A|FastEthernet8/1|
 | | | |
+|B1-PC1|192.168.3.11|192.168.3.1|VLAN13|Switch-B|FastEthernet1/1|
+|B1-PC2|192.168.3.12|192.168.3.1|VLAN13|Switch-B|FastEthernet2/1|
+|B1-PC3|192.168.3.13|192.168.3.1|VLAN13|Switch-B|FastEthernet3/1|
 | | | |
-|F2-G1-P1|192.168.3.11|192.168.2.1|
-|F2-G1-P2|192.168.3.12|192.168.2.1|
-|F2-G1-P3|192.168.3.13|192.168.2.1|
+|B2-PC1|192.168.4.11|192.168.4.1|VLAN14|Switch-B|FastEthernet4/1|
+|B2-PC2|192.168.4.12|192.168.4.1|VLAN14|Switch-B|FastEthernet5/1|
+|B2-PC3|192.168.4.13|192.168.4.1|VLAN14|Switch-B|FastEthernet6/1|
+|B2-PC4|192.168.4.14|192.168.4.1|VLAN14|Switch-B|FastEthernet7/1|
+|B2-PC5|192.168.4.15|192.168.4.1|VLAN14|Switch-B|FastEthernet8/1|
 | | | |
-|F2-G2-P1|192.168.4.11|192.168.2.1|
-|F2-G2-P2|192.168.4.12|192.168.2.1|
-|F2-G2-P3|192.168.4.13|192.168.2.1|
-|F2-G2-P4|192.168.4.14|192.168.2.1|
-|F2-G2-P5|192.168.4.15|192.168.2.1|
+|C1-PC1|192.168.5.11|192.168.5.1|VLAN15|Switch-C|FastEthernet1/1|
+|C1-PC2|192.168.5.12|192.168.5.1|VLAN15|Switch-C|FastEthernet2/1|
+|C1-PC3|192.168.5.13|192.168.5.1|VLAN15|Switch-C|FastEthernet3/1|
 | | | |
+|C2-PC1|192.168.6.11|192.168.6.1|VLAN16|Switch-C|FastEthernet4/1|
+|C2-PC2|192.168.6.12|192.168.6.1|VLAN16|Switch-C|FastEthernet5/1|
+|C2-PC3|192.168.6.13|192.168.6.1|VLAN16|Switch-C|FastEthernet6/1|
+|C2-PC4|192.168.6.14|192.168.6.1|VLAN16|Switch-C|FastEthernet7/1|
+|C2-PC5|192.168.6.15|192.168.6.1|VLAN16|Switch-C|FastEthernet8/1|
 | | | |
-|F3-G1-P1|192.168.5.11|192.168.3.1|
-|F3-G1-P2|192.168.5.12|192.168.3.1|
-|F3-G1-P3|192.168.5.13|192.168.3.1|
+|D1-PC1|192.168.7.11|192.168.7.1|VLAN17|Switch-D|FastEthernet1/1|
+|D1-PC2|192.168.7.12|192.168.7.1|VLAN17|Switch-D|FastEthernet2/1|
+|D1-PC3|192.168.7.13|192.168.7.1|VLAN17|Switch-D|FastEthernet3/1|
 | | | |
-|F3-G2-P1|192.168.6.11|192.168.3.1|
-|F3-G2-P2|192.168.6.12|192.168.3.1|
-|F3-G2-P3|192.168.6.13|192.168.3.1|
-|F3-G2-P4|192.168.6.14|192.168.3.1|
-|F3-G2-P5|192.168.6.15|192.168.3.1|
-| | | |
-| | | |
-|F4-G1-P1|192.168.7.11|192.168.4.1|
-|F4-G1-P2|192.168.7.12|192.168.4.1|
-|F4-G1-P3|192.168.7.13|192.168.4.1|
-| | | |
-|F4-G2-P1|192.168.8.11|192.168.4.1|
-|F4-G2-P2|192.168.8.12|192.168.4.1|
-|F4-G2-P3|192.168.8.13|192.168.4.1|
-|F4-G2-P4|192.168.8.14|192.168.4.1|
-|F4-G2-P5|192.168.8.15|192.168.4.1|
+|D2-PC1|192.168.8.11|192.168.8.1|VLAN18|Switch-D|FastEthernet4/1|
+|D2-PC2|192.168.8.12|192.168.8.1|VLAN18|Switch-D|FastEthernet5/1|
+|D2-PC3|192.168.8.13|192.168.8.1|VLAN18|Switch-D|FastEthernet6/1|
+|D2-PC4|192.168.8.14|192.168.8.1|VLAN18|Switch-D|FastEthernet7/1|
+|D2-PC5|192.168.8.15|192.168.8.1|VLAN18|Switch-D|FastEthernet8/1|
 
 ![ScrShot 03](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/03.png "ScrShot 03")  
 
