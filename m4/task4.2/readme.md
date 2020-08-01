@@ -471,7 +471,7 @@ SwitchD(config-if)#switchport trunk allowed vlan 17-18
 SwitchD#write
 SwitchD#copy running-config startup-config
 ```
-Checked how network works on Floor D between groups D1 and D2  
+Checked how network works on Floor D between groups D1 and D2 - good!  
 ![ScrShot 08](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/08.png "ScrShot 08")  
 
 Created simple PDU for two pairs of PCs: C1-PC1 -> D2-PC2; D2-PC5 -> C1-PC3.  
