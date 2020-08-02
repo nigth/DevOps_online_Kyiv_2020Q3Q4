@@ -158,47 +158,47 @@ Group D2 (5 PCs): 192.168.8.0/24
 
 Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLANs:  
 
-| Host | IP | Gateway | VLAN | Switch | Port |
-|:----:|:--:|:-------:|:----:|:------:|:----:|
-|A1-PC1|192.168.1.11|192.168.1.1|VLAN11|Switch-A|FastEthernet1/1|
-|A1-PC2|192.168.1.12|192.168.1.1|VLAN11|Switch-A|FastEthernet2/1|
-|A1-PC3|192.168.1.13|192.168.1.1|VLAN11|Switch-A|FastEthernet3/1|
+| Host | IP | Gateway | VLAN | Switch | Port |Router sub int.|
+|:----:|:--:|:-------:|:----:|:------:|:----:|:----------------:|
+|A1-PC1|192.168.1.11|192.168.1.1|VLAN11|Switch-A|FastEthernet1/1|fastEthernet6/0.11|
+|A1-PC2|192.168.1.12|192.168.1.1|VLAN11|Switch-A|FastEthernet2/1|fastEthernet6/0.11|
+|A1-PC3|192.168.1.13|192.168.1.1|VLAN11|Switch-A|FastEthernet3/1|fastEthernet6/0.11|
 | | | |
-|A2-PC1|192.168.2.11|192.168.2.1|VLAN12|Switch-A|FastEthernet4/1|
-|A2-PC2|192.168.2.12|192.168.2.1|VLAN12|Switch-A|FastEthernet5/1|
-|A2-PC3|192.168.2.13|192.168.2.1|VLAN12|Switch-A|FastEthernet6/1|
-|A2-PC4|192.168.2.14|192.168.2.1|VLAN12|Switch-A|FastEthernet7/1|
-|A2-PC5|192.168.2.15|192.168.2.1|VLAN12|Switch-A|FastEthernet8/1|
+|A2-PC1|192.168.2.11|192.168.2.1|VLAN12|Switch-A|FastEthernet4/1|fastEthernet6/0.12|
+|A2-PC2|192.168.2.12|192.168.2.1|VLAN12|Switch-A|FastEthernet5/1|fastEthernet6/0.12|
+|A2-PC3|192.168.2.13|192.168.2.1|VLAN12|Switch-A|FastEthernet6/1|fastEthernet6/0.12|
+|A2-PC4|192.168.2.14|192.168.2.1|VLAN12|Switch-A|FastEthernet7/1|fastEthernet6/0.12|
+|A2-PC5|192.168.2.15|192.168.2.1|VLAN12|Switch-A|FastEthernet8/1|fastEthernet6/0.12|
 | | | |
-|B1-PC1|192.168.3.11|192.168.3.1|VLAN13|Switch-B|FastEthernet1/1|
-|B1-PC2|192.168.3.12|192.168.3.1|VLAN13|Switch-B|FastEthernet2/1|
-|B1-PC3|192.168.3.13|192.168.3.1|VLAN13|Switch-B|FastEthernet3/1|
+|B1-PC1|192.168.3.11|192.168.3.1|VLAN13|Switch-B|FastEthernet1/1|fastEthernet7/0.13|
+|B1-PC2|192.168.3.12|192.168.3.1|VLAN13|Switch-B|FastEthernet2/1|fastEthernet7/0.13|
+|B1-PC3|192.168.3.13|192.168.3.1|VLAN13|Switch-B|FastEthernet3/1|fastEthernet7/0.13|
 | | | |
-|B2-PC1|192.168.4.11|192.168.4.1|VLAN14|Switch-B|FastEthernet4/1|
-|B2-PC2|192.168.4.12|192.168.4.1|VLAN14|Switch-B|FastEthernet5/1|
-|B2-PC3|192.168.4.13|192.168.4.1|VLAN14|Switch-B|FastEthernet6/1|
-|B2-PC4|192.168.4.14|192.168.4.1|VLAN14|Switch-B|FastEthernet7/1|
-|B2-PC5|192.168.4.15|192.168.4.1|VLAN14|Switch-B|FastEthernet8/1|
+|B2-PC1|192.168.4.11|192.168.4.1|VLAN14|Switch-B|FastEthernet4/1|fastEthernet7/0.14|
+|B2-PC2|192.168.4.12|192.168.4.1|VLAN14|Switch-B|FastEthernet5/1|fastEthernet7/0.14|
+|B2-PC3|192.168.4.13|192.168.4.1|VLAN14|Switch-B|FastEthernet6/1|fastEthernet7/0.14|
+|B2-PC4|192.168.4.14|192.168.4.1|VLAN14|Switch-B|FastEthernet7/1|fastEthernet7/0.14|
+|B2-PC5|192.168.4.15|192.168.4.1|VLAN14|Switch-B|FastEthernet8/1|fastEthernet7/0.14|
 | | | |
-|C1-PC1|192.168.5.11|192.168.5.1|VLAN15|Switch-C|FastEthernet1/1|
-|C1-PC2|192.168.5.12|192.168.5.1|VLAN15|Switch-C|FastEthernet2/1|
-|C1-PC3|192.168.5.13|192.168.5.1|VLAN15|Switch-C|FastEthernet3/1|
+|C1-PC1|192.168.5.11|192.168.5.1|VLAN15|Switch-C|FastEthernet1/1|fastEthernet8/0.15|
+|C1-PC2|192.168.5.12|192.168.5.1|VLAN15|Switch-C|FastEthernet2/1|fastEthernet8/0.15|
+|C1-PC3|192.168.5.13|192.168.5.1|VLAN15|Switch-C|FastEthernet3/1|fastEthernet8/0.15|
 | | | |
-|C2-PC1|192.168.6.11|192.168.6.1|VLAN16|Switch-C|FastEthernet4/1|
-|C2-PC2|192.168.6.12|192.168.6.1|VLAN16|Switch-C|FastEthernet5/1|
-|C2-PC3|192.168.6.13|192.168.6.1|VLAN16|Switch-C|FastEthernet6/1|
-|C2-PC4|192.168.6.14|192.168.6.1|VLAN16|Switch-C|FastEthernet7/1|
-|C2-PC5|192.168.6.15|192.168.6.1|VLAN16|Switch-C|FastEthernet8/1|
+|C2-PC1|192.168.6.11|192.168.6.1|VLAN16|Switch-C|FastEthernet4/1|fastEthernet8/0.16|
+|C2-PC2|192.168.6.12|192.168.6.1|VLAN16|Switch-C|FastEthernet5/1|fastEthernet8/0.16|
+|C2-PC3|192.168.6.13|192.168.6.1|VLAN16|Switch-C|FastEthernet6/1|fastEthernet8/0.16|
+|C2-PC4|192.168.6.14|192.168.6.1|VLAN16|Switch-C|FastEthernet7/1|fastEthernet8/0.16|
+|C2-PC5|192.168.6.15|192.168.6.1|VLAN16|Switch-C|FastEthernet8/1|fastEthernet8/0.16|
 | | | |
-|D1-PC1|192.168.7.11|192.168.7.1|VLAN17|Switch-D|FastEthernet1/1|
-|D1-PC2|192.168.7.12|192.168.7.1|VLAN17|Switch-D|FastEthernet2/1|
-|D1-PC3|192.168.7.13|192.168.7.1|VLAN17|Switch-D|FastEthernet3/1|
+|D1-PC1|192.168.7.11|192.168.7.1|VLAN17|Switch-D|FastEthernet1/1|fastEthernet9/0.17|
+|D1-PC2|192.168.7.12|192.168.7.1|VLAN17|Switch-D|FastEthernet2/1|fastEthernet9/0.17|
+|D1-PC3|192.168.7.13|192.168.7.1|VLAN17|Switch-D|FastEthernet3/1|fastEthernet9/0.17|
 | | | |
-|D2-PC1|192.168.8.11|192.168.8.1|VLAN18|Switch-D|FastEthernet4/1|
-|D2-PC2|192.168.8.12|192.168.8.1|VLAN18|Switch-D|FastEthernet5/1|
-|D2-PC3|192.168.8.13|192.168.8.1|VLAN18|Switch-D|FastEthernet6/1|
-|D2-PC4|192.168.8.14|192.168.8.1|VLAN18|Switch-D|FastEthernet7/1|
-|D2-PC5|192.168.8.15|192.168.8.1|VLAN18|Switch-D|FastEthernet8/1|
+|D2-PC1|192.168.8.11|192.168.8.1|VLAN18|Switch-D|FastEthernet4/1|fastEthernet9/0.18|
+|D2-PC2|192.168.8.12|192.168.8.1|VLAN18|Switch-D|FastEthernet5/1|fastEthernet9/0.18|
+|D2-PC3|192.168.8.13|192.168.8.1|VLAN18|Switch-D|FastEthernet6/1|fastEthernet9/0.18|
+|D2-PC4|192.168.8.14|192.168.8.1|VLAN18|Switch-D|FastEthernet7/1|fastEthernet9/0.18|
+|D2-PC5|192.168.8.15|192.168.8.1|VLAN18|Switch-D|FastEthernet8/1|fastEthernet9/0.18|
 
 ![ScrShot 03](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/03.png "ScrShot 03")  
 
@@ -478,13 +478,13 @@ Created simple PDU for two pairs of PCs: C1-PC1 -> D2-PC2; D1-PC3 -> C2-PC5.
 Checked how network works between Floor C and Floor D. All packets were successfull.  
 ![ScrShot 09](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/09.png "ScrShot 09")  
 
-Analyzed how all networks are orking. Checked connection randomly crosswide everywhere:  
-![ScrShot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/10.png "ScrShot 10")  
+So we analyzed how all networks are working. Checked connection randomly crosswide everywhere Ok.  
+
 ___
 
 **3.** Created a model of enterprise network. There are 5 buildings with 1 floor. Each of buildings has 1 workgroup with 6 computers. The network is based on the 1-port router. Saved project as `max-4-2-3.pkt`  
 
-
+![ScrShot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/10.png "ScrShot 10")  
 ___
 
 _Thanks for your time!_  
