@@ -541,19 +541,30 @@ interface vlan 11
 ip address 192.168.11.1 255.255.255.0
 
 interface FastEthernet1/1
-switchport access vlan 11
-interface FastEthernet2/1
-switchport access vlan 11
-interface FastEthernet3/1
-switchport access vlan 11
-interface FastEthernet4/1
-switchport access vlan 11
-interface FastEthernet5/1
-switchport access vlan 11
-interface FastEthernet6/1
+switchport mode access
 switchport access vlan 11
 
-interface fastEthernet0/1
+interface FastEthernet2/1
+switchport mode access
+switchport access vlan 11
+
+interface FastEthernet3/1
+switchport mode access
+switchport access vlan 11
+
+interface FastEthernet4/1
+switchport mode access
+switchport access vlan 11
+
+interface FastEthernet5/1
+switchport mode access
+switchport access vlan 11
+
+interface FastEthernet6/1
+switchport mode access
+switchport access vlan 11
+
+interface FastEthernet0/1
 switchport mode trunk
 switchport trunk allowed vlan 11
 ```
@@ -564,19 +575,30 @@ interface vlan 12
 ip address 192.168.12.1 255.255.255.0
 
 interface FastEthernet1/1
-switchport access vlan 12
-interface FastEthernet2/1
-switchport access vlan 12
-interface FastEthernet3/1
-switchport access vlan 12
-interface FastEthernet4/1
-switchport access vlan 12
-interface FastEthernet5/1
-switchport access vlan 12
-interface FastEthernet6/1
+switchport mode access
 switchport access vlan 12
 
-interface fastEthernet0/1
+interface FastEthernet2/1
+switchport mode access
+switchport access vlan 12
+
+interface FastEthernet3/1
+switchport mode access
+switchport access vlan 12
+
+interface FastEthernet4/1
+switchport mode access
+switchport access vlan 12
+
+interface FastEthernet5/1
+switchport mode access
+switchport access vlan 12
+
+interface FastEthernet6/1
+switchport mode access
+switchport access vlan 12
+
+interface FastEthernet0/1
 switchport mode trunk
 switchport trunk allowed vlan 12
 ```
@@ -587,19 +609,30 @@ interface vlan 13
 ip address 192.168.13.1 255.255.255.0
 
 interface FastEthernet1/1
-switchport access vlan 13
-interface FastEthernet2/1
-switchport access vlan 13
-interface FastEthernet3/1
-switchport access vlan 13
-interface FastEthernet4/1
-switchport access vlan 13
-interface FastEthernet5/1
-switchport access vlan 13
-interface FastEthernet6/1
+switchport mode access
 switchport access vlan 13
 
-interface fastEthernet0/1
+interface FastEthernet2/1
+switchport mode access
+switchport access vlan 13
+
+interface FastEthernet3/1
+switchport mode access
+switchport access vlan 13
+
+interface FastEthernet4/1
+switchport mode access
+switchport access vlan 13
+
+interface FastEthernet5/1
+switchport mode access
+switchport access vlan 13
+
+interface FastEthernet6/1
+switchport mode access
+switchport access vlan 13
+
+interface FastEthernet0/1
 switchport mode trunk
 switchport trunk allowed vlan 13
 ```
@@ -610,19 +643,30 @@ interface vlan 14
 ip address 192.168.14.1 255.255.255.0
 
 interface FastEthernet1/1
-switchport access vlan 14
-interface FastEthernet2/1
-switchport access vlan 14
-interface FastEthernet3/1
-switchport access vlan 14
-interface FastEthernet4/1
-switchport access vlan 14
-interface FastEthernet5/1
-switchport access vlan 14
-interface FastEthernet6/1
+switchport mode access
 switchport access vlan 14
 
-interface fastEthernet0/1
+interface FastEthernet2/1
+switchport mode access
+switchport access vlan 14
+
+interface FastEthernet3/1
+switchport mode access
+switchport access vlan 14
+
+interface FastEthernet4/1
+switchport mode access
+switchport access vlan 14
+
+interface FastEthernet5/1
+switchport mode access
+switchport access vlan 14
+
+interface FastEthernet6/1
+switchport mode access
+switchport access vlan 14
+
+interface FastEthernet0/1
 switchport mode trunk
 switchport trunk allowed vlan 14
 ```
@@ -633,19 +677,30 @@ interface vlan 15
 ip address 192.168.15.1 255.255.255.0
 
 interface FastEthernet1/1
-switchport access vlan 15
-interface FastEthernet2/1
-switchport access vlan 15
-interface FastEthernet3/1
-switchport access vlan 15
-interface FastEthernet4/1
-switchport access vlan 15
-interface FastEthernet5/1
-switchport access vlan 15
-interface FastEthernet6/1
+switchport mode access
 switchport access vlan 15
 
-interface fastEthernet0/1
+interface FastEthernet2/1
+switchport mode access
+switchport access vlan 15
+
+interface FastEthernet3/1
+switchport mode access
+switchport access vlan 15
+
+interface FastEthernet4/1
+switchport mode access
+switchport access vlan 15
+
+interface FastEthernet5/1
+switchport mode access
+switchport access vlan 15
+
+interface FastEthernet6/1
+switchport mode access
+switchport access vlan 15
+
+interface FastEthernet0/1
 switchport mode trunk
 switchport trunk allowed vlan 15
 ```
@@ -654,58 +709,66 @@ Conigured additional central transport switch, **Switch-6**:
 vlan 11
 interface vlan 11
 ip address 192.168.11.1 255.255.255.0
+
 vlan 12
 interface vlan 12
 ip address 192.168.12.1 255.255.255.0
+
 vlan 13
 interface vlan 13
 ip address 192.168.13.1 255.255.255.0
+
 vlan 14
 interface vlan 14
 ip address 192.168.14.1 255.255.255.0
+
 vlan 15
 interface vlan 15
 ip address 192.168.15.1 255.255.255.0
 
 interface FastEthernet1/1
 switchport mode trunk
-switchport  trunk allowed vlan 11
+switchport trunk allowed vlan 11
+
 interface FastEthernet2/1
 switchport mode trunk
-switchport  trunk allowed vlan 12
+switchport trunk allowed vlan 12
+
 interface FastEthernet3/1
 switchport mode trunk
-switchport  trunk allowed vlan 13
+switchport trunk allowed vlan 13
+
 interface FastEthernet4/1
 switchport mode trunk
-switchport  trunk allowed vlan 14
+switchport trunk allowed vlan 14
+
 interface FastEthernet5/1
 switchport mode trunk
-switchport  trunk allowed vlan 15
+switchport trunk allowed vlan 15
 
-interface fastEthernet0/1
+interface FastEthernet0/1
 switchport mode trunk
 switchport trunk allowed vlan 11-15
 ```
 Configured router **Router-7**:  
 ```
-interface fastEthernet0/0.11
+interface FastEthernet0/0.11
 encapsulation dot1Q 11
 ip address 192.168.11.1 255.255.255.0
 
-interface fastEthernet0/0.12
+interface FastEthernet0/0.12
 encapsulation dot1Q 12
 ip address 192.168.12.1 255.255.255.0
 
-interface fastEthernet0/0.13
+interface FastEthernet0/0.13
 encapsulation dot1Q 13
 ip address 192.168.13.1 255.255.255.0
 
-interface fastEthernet0/0.14
+interface FastEthernet0/0.14
 encapsulation dot1Q 14
 ip address 192.168.14.1 255.255.255.0
 
-interface fastEthernet0/0.15
+interface FastEthernet0/0.15
 encapsulation dot1Q 15
 ip address 192.168.15.1 255.255.255.0
 ```
