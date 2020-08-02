@@ -478,15 +478,64 @@ Created simple PDU for two pairs of PCs: C1-PC1 -> D2-PC2; D1-PC3 -> C2-PC5.
 Checked how network works between Floor C and Floor D. All packets were successfull.  
 ![ScrShot 09](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/09.png "ScrShot 09")  
 
-So we analyzed how all networks are working. Checked connection randomly crosswide everywhere Ok.  
-
+So I analyzed how all networks are working. Checked connection randomly crosswide everywhere Ok.  
 ___
 
 **3.** Created a model of enterprise network. There are 5 buildings with 1 floor. Each of buildings has 1 workgroup with 6 computers. The network is based on the 1-port router. Saved project as `max-4-2-3.pkt`  
+
+House 1: 192.168.11.0/24 _(Switch-1)_  
+House 2: 192.168.12.0/24 _(Switch-2)_  
+House 3: 192.168.13.0/24 _(Switch-3)_  
+House 4: 192.168.14.0/24 _(Switch-4)_  
+House 3: 192.168.15.0/24 _(Switch-5)_  
+Took fiber channels between swithes of houses in trunk mode.  
+Used additional central transport switch _(Switch-6)_ and a router _(Router-7)_.  
+
+Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLANs:  
+
+|PC name|      IP    |   Gateway  | VLAN | Switch |Port on switch |Router sub interf.|
+|:----:|:-----------:|:----------:|:----:|:------:|:-------------:|:----------------:|
+|H1-PC1|192.168.11.11|192.168.11.1|VLAN11|Switch-1|FastEthernet1/1|fastEthernet1/0.11|
+|H1-PC2|192.168.11.12|192.168.11.1|VLAN11|Switch-1|FastEthernet2/1|fastEthernet1/0.11|
+|H1-PC3|192.168.11.13|192.168.11.1|VLAN11|Switch-1|FastEthernet3/1|fastEthernet1/0.11|
+|H1-PC4|192.168.11.14|192.168.11.1|VLAN11|Switch-1|FastEthernet4/1|fastEthernet1/0.11|
+|H1-PC5|192.168.11.15|192.168.11.1|VLAN11|Switch-1|FastEthernet5/1|fastEthernet1/0.11|
+|H1-PC6|192.168.11.16|192.168.11.1|VLAN11|Switch-1|FastEthernet6/1|fastEthernet1/0.11|
+| | | |
+|H2-PC1|192.168.12.11|192.168.12.1|VLAN12|Switch-2|FastEthernet1/1|fastEthernet1/0.12|
+|H2-PC2|192.168.12.12|192.168.12.1|VLAN12|Switch-2|FastEthernet2/1|fastEthernet1/0.12|
+|H2-PC3|192.168.12.13|192.168.12.1|VLAN12|Switch-2|FastEthernet3/1|fastEthernet1/0.12|
+|H2-PC4|192.168.12.14|192.168.12.1|VLAN12|Switch-2|FastEthernet4/1|fastEthernet1/0.12|
+|H2-PC5|192.168.12.15|192.168.12.1|VLAN12|Switch-2|FastEthernet5/1|fastEthernet1/0.12|
+|H2-PC6|192.168.12.16|192.168.12.1|VLAN12|Switch-2|FastEthernet6/1|fastEthernet1/0.12|
+| | | |
+|H3-PC1|192.168.13.11|192.168.13.1|VLAN13|Switch-3|FastEthernet1/1|fastEthernet1/0.13|
+|H3-PC2|192.168.13.12|192.168.13.1|VLAN13|Switch-3|FastEthernet2/1|fastEthernet1/0.13|
+|H3-PC3|192.168.13.13|192.168.13.1|VLAN13|Switch-3|FastEthernet3/1|fastEthernet1/0.13|
+|H3-PC4|192.168.13.14|192.168.13.1|VLAN13|Switch-3|FastEthernet4/1|fastEthernet1/0.13|
+|H3-PC5|192.168.13.15|192.168.13.1|VLAN13|Switch-3|FastEthernet5/1|fastEthernet1/0.13|
+|H3-PC6|192.168.13.16|192.168.13.1|VLAN13|Switch-3|FastEthernet6/1|fastEthernet1/0.13|
+| | | |
+|H4-PC1|192.168.14.11|192.168.14.1|VLAN14|Switch-4|FastEthernet1/1|fastEthernet1/0.14|
+|H4-PC2|192.168.14.12|192.168.14.1|VLAN14|Switch-4|FastEthernet2/1|fastEthernet1/0.14|
+|H4-PC3|192.168.14.13|192.168.14.1|VLAN14|Switch-4|FastEthernet3/1|fastEthernet1/0.14|
+|H4-PC4|192.168.14.14|192.168.14.1|VLAN14|Switch-4|FastEthernet4/1|fastEthernet1/0.14|
+|H4-PC5|192.168.14.15|192.168.14.1|VLAN14|Switch-4|FastEthernet5/1|fastEthernet1/0.14|
+|H4-PC6|192.168.14.16|192.168.14.1|VLAN14|Switch-4|FastEthernet6/1|fastEthernet1/0.14|
+| | | |
+|H5-PC1|192.168.15.11|192.168.15.1|VLAN15|Switch-5|FastEthernet1/1|fastEthernet1/0.15|
+|H5-PC2|192.168.15.12|192.168.15.1|VLAN15|Switch-5|FastEthernet2/1|fastEthernet1/0.15|
+|H5-PC3|192.168.15.13|192.168.15.1|VLAN15|Switch-5|FastEthernet3/1|fastEthernet1/0.15|
+|H5-PC4|192.168.15.14|192.168.15.1|VLAN15|Switch-5|FastEthernet4/1|fastEthernet1/0.15|
+|H5-PC5|192.168.15.15|192.168.15.1|VLAN15|Switch-5|FastEthernet5/1|fastEthernet1/0.15|
+|H5-PC6|192.168.15.16|192.168.15.1|VLAN15|Switch-5|FastEthernet6/1|fastEthernet1/0.15|
 
 ![ScrShot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/10.png "ScrShot 10")  
 ___
 
 _Thanks for your time!_  
+
+
+
 
 
