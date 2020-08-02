@@ -19,7 +19,7 @@ Assigned IP addresses for computers (mask is everything 255.255.255.0):
 |srv1|192.168.11.10|192.168.11.1|
 |srv2|192.168.12.12|192.168.12.1|
 
-![ScrShot 01](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/01.png "ScrShot 01")  
+![ScrShot 01](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.3/shots/01.png "ScrShot 01")  
 ___
 
 _Thanks for your time!_  
