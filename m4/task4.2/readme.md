@@ -772,6 +772,19 @@ interface FastEthernet0/0.15
 encapsulation dot1Q 15
 ip address 192.168.15.1 255.255.255.0
 ```
+Analyzed this project in some steps.  
+First of all, checked cinnections inside every houses.  
+Created simple PDU simulation for the next pairs of PC:  
+```
+H1-PC1 + H1-PC4
+H2-PC3 + H2-PC6
+H3-PC4 + H3-PC1
+H4-PC5 + H4-PC2
+H5-PC6 + H5-PC3
+```
+Saw that all connections build successfull.Also open details for example,  
+source H3-PC4 and destination H3-PC1 and saw that "FastEthernet0 receives the frame."  
+![ScrShot 11](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/11.png "ScrShot 11")  
 ___
 
 _Thanks for your time!_  
