@@ -2,7 +2,7 @@
 ### Module 4. Networking Fundamental
 ___
 
-**1.** Created a model of enterprise network. There are 2 buildings with 2 floors.  
+**4.2.1.** Created a model of enterprise network. There are 2 buildings with 2 floors.  
 Each of workgroups on the floor has 5 computers. Saved project as `max-4-2-1.pkt`  
 
 **Office A** _(Router-A)_  
@@ -140,7 +140,7 @@ Reply from 192.168.11.15: bytes=32 time<1ms TTL=126
 ![ScrShot 02](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/02.png "ScrShot 02")  
 ___
 
-**2.** Created a model of enterprise network. There is 1 building with 4 floors.  
+**4.2.2.** Created a model of enterprise network. There is 1 building with 4 floors.  
 On each floors the are 2 groups with 3 and 5 computers. Saved project as `max-4-2-2.pkt`  
 
 **Floor A** _(Switch-A)_  
@@ -481,7 +481,7 @@ Checked how network works between Floor C and Floor D. All packets were successf
 So I analyzed how all networks are working. Checked connection randomly crosswide everywhere Ok.  
 ___
 
-**3.** Created a model of enterprise network. There are 5 buildings with 1 floor. Each of buildings has  
+**4.2.3.** Created a model of enterprise network. There are 5 buildings with 1 floor. Each of buildings has  
 1 workgroup with 6 computers. The network is based on the 1-port router. Saved project as `max-4-2-3.pkt`  
 
 House 1: 192.168.11.0/24 _(Switch-1)_  
@@ -534,6 +534,7 @@ Assigned IP addresses for PCs (mask 255.255.255.0) and planned VLANs:
 ![ScrShot 10](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/10.png "ScrShot 10")  
 
 Conigured switches in the houses.  
+http://routeworld.ru/set-i-internet/web_practice/page,1,166-staticheskaya-marshrutizaciya-na-cisco.html  
 House 1, **Switch-1**:  
 ```
 vlan 11
@@ -704,7 +705,7 @@ interface FastEthernet0/1
 switchport mode trunk
 switchport trunk allowed vlan 15
 ```
-Conigured additional central transport switch, **Switch-6**:  
+Configured additional central transport switch, **Switch-6**:  
 ```
 vlan 11
 interface vlan 11
@@ -773,7 +774,8 @@ encapsulation dot1Q 15
 ip address 192.168.15.1 255.255.255.0
 ```
 Analyzed this project in some steps.  
-First of all, checked cinnections inside every houses.  
+
+First of all, checked connections inside every houses.  
 Created simple PDU simulation for the next pairs of PC:  
 ```
 H1-PC1 + H1-PC4
@@ -782,9 +784,13 @@ H3-PC4 + H3-PC1
 H4-PC5 + H4-PC2
 H5-PC6 + H5-PC3
 ```
-Saw that all connections build successfull.Also open details for example,  
+Saw that all connections build successfull. Also opened details for example,  
 source H3-PC4 and destination H3-PC1 and saw that "FastEthernet0 receives the frame."  
 ![ScrShot 11](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/11.png "ScrShot 11")  
+
+Next step was about ping some hosts from all networks in the CLI interface of Switch-6 and Router-7.  
+As we can see, all networks are pinged successfully from a central switch and from router.  
+![ScrShot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/12.png "ScrShot 12")  
 ___
 
 _Thanks for your time!_  
