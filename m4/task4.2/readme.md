@@ -791,6 +791,21 @@ source H3-PC4 and destination H3-PC1 and saw that "FastEthernet0 receives the fr
 Next step was about ping some hosts from all networks in the CLI interface of Switch-6 and Router-7.  
 As we can see, all networks are pinged successfully from a central switch and from router.  
 ![ScrShot 12](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/12.png "ScrShot 12")  
+
+
+Finally, make connection between some networks crosswide. For example,  
+from 1 to 2 and 3, from 2 to 1 and 3, from 3 to 1 and 2. All PDUs were successful.  
+```
+H1-PC1 + H2-PC1
+H1-PC2 + H3-PC3
+
+H2-PC1 + H1-PC1
+H2-PC3 + H3-PC1
+
+H3-PC1 + H1-PC1
+H3-PC2 + H2-PC1
+```
+![ScrShot 13](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.2/shots/13.png "ScrShot 13")  
 ___
 
 _Thanks for your time!_  
