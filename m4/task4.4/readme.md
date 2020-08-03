@@ -34,7 +34,9 @@ Checked that for example PC1 get a DHCP address and DNS address automatically - 
 ![ScrShot 05](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/05.png "ScrShot 05")  
 
 Checked that all connections are working well, used simple PDU modeling (this is with DHPC enabled):  
-![ScrShot 05](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/05.png "ScrShot 05")  
+![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/06.png "ScrShot 06")  
+
+![ScrShot 07](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/07.png "ScrShot 07")  
 ___
 
 _Thanks for your time!_  
