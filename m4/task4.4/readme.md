@@ -7,7 +7,7 @@ https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/tree/master/m4/task4.2
 It works well, for example try a simple PDU modeling between all subnetworks - successful:  
 ![ScrShot 01](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/01.png "ScrShot 01")  
 ___
-:white_check_mark: **4.4.2.** Organized 2 subnetworks with DHCP and DNS on the servers. Saved project as `max-4-4-2.pkt`  
+:heavy_check_mark: **4.4.2.** Organized 2 subnetworks with DHCP and DNS on the servers. Saved project as `max-4-4-2.pkt`  
 ![ScrShot 02](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/02.png "ScrShot 02")  
 
 Assigned IP addresses (mask is everything `255.255.255.0`).  
@@ -36,7 +36,13 @@ Checked that for example PC1 get a DHCP address and DNS address automatically - 
 Checked that all connections are working well, used simple PDU modeling (this is with DHPC enabled):  
 ![ScrShot 06](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/06.png "ScrShot 06")  
 
+Next setup DNS services:  
+- on the Srv1: Name `www.server1.com`, Type A Record, Address `192.168.1.11`  
+- on the Srv2: Name `www.server2.com`, Type A Record, Address `192.168.2.11`  
 ![ScrShot 07](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/07.png "ScrShot 07")  
+
+Now time to ping and visit our servers by names on the PC's web-browsers - O'k, both are working!:  
+![ScrShot 08](https://github.com/nigth/DevOps_online_Kyiv_2020Q3Q4/blob/master/m4/task4.4/shots/08.png "ScrShot 08")  
 ___
 
 _Thanks for your time!_  
