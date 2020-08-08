@@ -54,7 +54,8 @@ rmdir test2
 - The **cat** command is the simplest way to view the contents of a file.  
 - The **more** command displays the contents of the file one screen at a time for large files.  
 - The **less** command is similar to the more command but provides extensive features. One important one is that it allows backward as well as forward movement in the file, even with pipes. Unlike **more**, if the file content fits the screen, less will still display the prompt.  
-In our case, it doesn't matter because a `/etc/fstab` file is little, only for one page.  
+
+In our case, it doesn't matter because the `/etc/fstab` file is little, only for one page.  
 ```
 cat /etc/fstab
 more /etc/fstab
