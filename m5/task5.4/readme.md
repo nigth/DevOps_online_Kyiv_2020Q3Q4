@@ -1,11 +1,17 @@
 ## Task 5.4
 ### Module 5. Linux
 
-**1. User management.** I have 2 users in my system: `ROOT` and `MAXIM`. Here the new users `GUEST` and `USER` will be created.  
+**1. User management.** I have 3 users in my system: `ROOT`, `MAXIM` and `GUEST`. Here a new user `USER` will be created.  
 
-**1.1.** Create the new users `guest` and `user`  
-
-![Screenshot 01](screenshts/01.png "Screenshot 01")  
+**1.1.** Create a new user `user`  
+```
+sudo groupadd user
+sudo useradd -g user -s /bin/bash -d /home/user -m user
+sudo passwd user
+id user
+ls -ld /home/user
+```
+![Screenshot 01](screenshots/01.png "Screenshot 01")  
 
 **1.2.** Log in to the system as `user` _(hint: use `su`)._  
 
@@ -39,7 +45,7 @@
 
 ![Screenshot 08](screenshots/08.png "Screenshot 08")  
 
-**3.2.** Login in to the system as `guest`. Create directory `testDir` in the `/tmp`; put some file into `testDir` and prohibit user `user` from visitng this directory (i.e. `testDir`).  
+**3.2.** Log in to the system as `guest`. Create directory `testDir` in the `/tmp`; put some file into `testDir` and prohibit user `user` from visitng this directory (i.e. `testDir`).  
 
 ![Screenshot 09](screenshots/07.png "Screenshot 09")  
 
