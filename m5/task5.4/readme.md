@@ -14,10 +14,20 @@ ls -ld /home/user
 ![Screenshot 01](screenshots/01.png "Screenshot 01")  
 
 **1.2.** Log in to the system as `user` _(hint: use `su`)._  
-
+```
+su user
+whoami
+```
 ![Screenshot 02](screenshots/02.png "Screenshot 02")  
 
 **1.3.** Edit `/etc/passwd` to prevent user `user` from logging in to the system.  
+The user `user` isn't sudoers, he can only read `/etc/passwd`.  
+I need to logout from `user`, and change **`/bin/bash`** in the `/etc/passwd` to **`/bin/nologin`** and try to login again:  
+```
+exit
+sudo vi /etc/passwd
+su user
+```
 
 ![Screenshot 03](screenshots/03.png "Screenshot 03")  
 
