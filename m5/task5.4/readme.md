@@ -110,7 +110,19 @@ See that user **user** is denied from visiting the `testdir`.
 ![Screenshot 11](screenshots/11.png "Screenshot 11")  
 
 **3.3** Test, if it possible to forbid an owner of some file to read to or write from this file.  
-
+```
+cd /tmp/testdir
+touch ahtung.txt
+echo "vse propalo" > ahtung.xt
+cat ahtung.txt
+---
+$ vse propalo
+---
+chmod a-r ahtung.txt
+cat ahtung.txt
+---
+$ Permission denied
+```
 ![Screenshot 12](screenshots/12.png "Screenshot 12")  
 
 ___
