@@ -122,6 +122,12 @@ chmod a-r ahtung.txt
 cat ahtung.txt
 ---
 $ Permission denied
+---
+chmod a-w ahtung.txt
+echo "oh nooo" > ahtung.txt
+---
+$ Permission denied
+---
 ```
 ![Screenshot 12](screenshots/12.png "Screenshot 12")  
 
