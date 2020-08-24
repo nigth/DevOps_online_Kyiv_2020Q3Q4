@@ -41,27 +41,28 @@ Unfortunatelly, these commands are finished with red alerts too:
 
 Finally is the time to generate a user key, this operation works well:  
 ```
-cd ~\.ssh\
+cd .ssh\
 ls
 ssh-keygen
 ls
 ```
 Now I have a public/private key pair.  
 ![ScrShot 04](scr/4.png "ScrShot 04")  
-
-**5.7.2.** 
-
-
-
-**5.7.3.** 
+ 
+**5.7.2.**   
 
 
 
-**5.7.4.** 
+**5.7.3.**  
 
 
 
-**5.7.5.** __optional/facultative__
+**5.7.4.**  
+
+
+
+**5.7.5.** __optional/facultative__  
+
 ![ScrShot 05](scr/5.png "ScrShot 05")  
 
 ___
