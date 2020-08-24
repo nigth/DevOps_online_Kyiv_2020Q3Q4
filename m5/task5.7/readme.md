@@ -10,7 +10,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 But finally we got an error code 0x800f0950 - unable to install OpenSSH.Server~~~~0.0.1.0 in Windows 2019 Server   
-![ScrShot 01](/scr/1.png "ScrShot 01")  
+![ScrShot 01](scr/1.png "ScrShot 01")  
 
 Lets try to connect to other system from our Windows 2019 Server:  
 ```
