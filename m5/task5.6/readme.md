@@ -64,20 +64,25 @@ exit
 ```
 su guest
 whoami
-setfacl
+setfacl -m u:utest:r /tmp/acl_test
+getfacl /tmp/acl_test
+exit
 ```
 Test if the actions are effectively prohibited  
 ```
+su utest
+whoami
+cd /tmp/acl_test
 touch /tmp/acl_test/prohibited.txt
 ```
-Is it possible to invoke this command?  
+It is impossible to invoke this command, because `utest` has only READ permission.  
 ```
 echo “new content” > /tmp/acl_test/utest.txt
 ```
-Test if `utest` can be prevented from modifying content of the file `utest.txt` by means of ACL.  
-(Note that user `utest` is the owner of the file `/tmp/acl_test/utest.txt`).  
+Instead of that user `utest` is the owner of the file `/tmp/acl_test/utest.txt`,  
+the `utest` is prevented from modifying content of the file `utest.txt` by means of ACL.  
 
-
+![ScrShot 05](scr/05.png "ScrShot 05")  
 
 **5.6.4.** Consider a situation when at the ACL level user `utest` is allowed to have all possible privileges  
 with respect to `/tmp/acl_test`, while no action is allowed with chmod (conventional mechanism).  
@@ -101,7 +106,7 @@ in such a way as to allow read-only access. Check permissions with `getfacl`.
 
 
 
-![ScrShot 05](scr/05.png "ScrShot 05")  
+
 
 ![ScrShot 06](scr/06.png "ScrShot 06")  
 
