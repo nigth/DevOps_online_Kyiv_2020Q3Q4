@@ -44,7 +44,7 @@ whoami
 mkdir /tmp/acl_test && cd "$_"
 ls -ld /tmp/acl_test
 ls -l /tmp/acl_test
-chmod 777 cd /tmp
+chmod 777 /tmp/acl_test
 getfacl /tmp/acl_test
 exit
 ```
@@ -87,44 +87,81 @@ the `utest` is prevented from modifying content of the file `utest.txt` by means
 **5.6.4.** Consider a situation when at the ACL level user `utest` is allowed to have all possible privileges  
 with respect to `/tmp/acl_test`, while no action is allowed with chmod (conventional mechanism).  
 _(Hint: repeat step 3, but given the new context)_.  
+```
+su guest
+whoami
+chmod 0 /tmp/acl_test
+getfacl /tmp/acl_test
+setfacl -m u:utest:rwx /tmp/acl_test
+getfacl /tmp/acl_test
+exit
+```
+![ScrShot 06](scr/06.png "ScrShot 06")  
 
+Verify that user `utest` has permissions:  
+```
+su utest
+whoami
+cd /tmp/acl_test
+getfacl /tmp/acl_test
+getfacl /tmp/acl_test/utest.txt
+touch /tmp/acl_test/prohibited.txt
+echo “new content” > /tmp/acl_test/utest.txt
+ls -ld /tmp/acl_test
+exit
+```
+![ScrShot 07](scr/06.png "ScrShot 07")  
 
 **5.6.5.** For user `utest`, set default ACLs to the directory `/tmp/acl_test` which allow read-only access  
 _(hint: use the -d option of the setfacl command)_.  
+```
+su quest
+whoami
+getfacl /tmp/acl_test
+setfacl -d -m u:utest:r /tmp/acl_test
+getfacl /tmp/acl_test
+exit
+```
+![ScrShot 08](scr/08.png "ScrShot 08")  
+
 Being logged in as `utest`, invoke `touch` to create the file `utest2.txt` in the `/tmp/acl_test` directory.  
 Query permissions on this file using `getfacl`.  
-
+```
+su utest
+whoami
+cd /tmp/acl_test
+touch /tmp/acl_test/utest2.txt
+echo “new content 2” > /tmp/acl_test/utest2.txt
+getfacl /tmp/acl_test
+getfacl /tmp/acl_test/utest2.txt
+exit
+```
+So, the `utest` user can create a new file, but can't modify it.  
+![ScrShot 09](scr/09.png "ScrShot 09")  
 
 **5.6.6.** Set maximum permissions mask on `/tmp/acl_test/utest.txt` file  
 in such a way as to allow read-only access. Check permissions with `getfacl`.  
-
-
-
-**5.6.7.** Delete all ACL entries relative to the `/tmp/acl_test` directory.  
-
-
-
-
-
-
-
-![ScrShot 06](scr/06.png "ScrShot 06")  
-
-![ScrShot 07](scr/06.png "ScrShot 07")  
-
-![ScrShot 08](scr/08.png "ScrShot 08")  
-
-![ScrShot 09](scr/09.png "ScrShot 09")  
-
+```
+su utest
+whoami
+getfacl /tmp/acl_test/utest.txt
+chmod 100 /tmp/acl_test/utest.txt
+chmod ug=r,o=r /tmp/acl_test/utest.txt
+getfacl /tmp/acl_test/utest.txt
+exit
+```
 ![ScrShot 10](scr/10.png "ScrShot 10")  
 
+**5.6.7.** Delete all ACL entries relative to the `/tmp/acl_test` directory.  
+```
+su guest
+whoami
+getfacl /tmp/acl_test
+setfacl -bn /tmp/acl_test
+getfacl /tmp/acl_test
+exit
+```
 ![ScrShot 11](scr/11.png "ScrShot 11")  
-
-![ScrShot 12](scr/12.png "ScrShot 12")  
-
-![ScrShot 13](scr/13.png "ScrShot 13")  
-
-![ScrShot 14](scr/14.png "ScrShot 14")  
 
 ___
  
