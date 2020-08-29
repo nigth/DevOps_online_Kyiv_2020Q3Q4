@@ -158,7 +158,7 @@ uname -a
 ```
 ![ScrShot 12](scr/12.png "ScrShot 12")  
 
-**5.7.5*.** __optional/facultative__ Intercept (capture) traffic (tcpdump, wireshark)  
+**5.7.5.** __optional/facultative__ Intercept (capture) traffic (tcpdump, wireshark)  
 while authorizing the remote client on the server using ssh, telnet, rlogin. Analyze the result.  
 
 - In the TELNET session we can capture not secured login and password:  
