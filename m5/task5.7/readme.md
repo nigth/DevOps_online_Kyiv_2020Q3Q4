@@ -107,7 +107,7 @@ ssh-keygen -t dsa
 ```
 ![ScrShot 09](scr/09.png "ScrShot 09")  
 
-**5.7.4.**. Implement port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.  
+**5.7.4.** Implement port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.  
 I have two virtual machines:  
 1) Ubuntu 20, with 3 network adapters (NAT, Bridged, Internal), 2 users - `maxim` and `quest`;  
 2) Centos 8, with 1 network adapter only Internal network, with 2 users - `maxim` and `quest`;  
@@ -158,10 +158,36 @@ uname -a
 ```
 ![ScrShot 12](scr/12.png "ScrShot 12")  
 
-**5.7.5.** __optional/facultative__  
+**5.7.5*.** __optional/facultative__ Intercept (capture) traffic (tcpdump, wireshark)  
+while authorizing the remote client on the server using ssh, telnet, rlogin. Analyze the result.  
 
+- In the TELNET session we can capture not secured login and password:  
+```
+# virtual ubuntu
+sudo apt install tshark
+sudo apt install telnetd
+sudo tcpdump port 23 -s 0 -i enp0s9 -w output23.pcap
 
+# host machine
+telnet -l guest 192.168.6.20
 
+# virtual ubuntu
+tshark -z follow,tcp,ascii,0 -P -r output23.pcap
+```
+![ScrShot 13](scr/13.png "ScrShot 13")  
+
+- In the SSH session we couldn't grep open password or login, because encrypted:  
+```
+# virtual ubuntu
+sudo tcpdump port 22 -s 0 -i enp0s9 -w outssh22.pcap
+
+# host machine
+ssh guest@192.168.6.20
+
+# virtual ubuntu
+tshark -z follow,tcp,ascii,0 -P -r outssh22.pcap
+```
+![ScrShot 14](scr/14.png "ScrShot 14")  
 ___
  
 _Thanks for your time!_  
