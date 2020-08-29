@@ -188,6 +188,22 @@ ssh guest@192.168.6.20
 tshark -z follow,tcp,ascii,0 -P -r outssh22.pcap
 ```
 ![ScrShot 14](scr/14.png "ScrShot 14")  
+
+- As for RLOGIN we couldn't grep open password or login, because it is encrypted the sane as SSH on the 22 port:  
+```
+# virtual ubuntu
+sudo tcpdump -s 0 -i enp0s9 -w outrlogin.pcap
+
+# host machine
+rlogin -l guest 192.168.6.20
+
+# virtual ubuntu
+tshark -z follow,tcp,ascii,0 -P -r outrlogin.pcap
+```
+In the old time RLOGIN was the same unsecure as TELNET.  
+But now RLOGIN is deprecated, and still just like an alias for SSH.  
+You can see it when call `man rlogin` and `man ssh` - both commands are shown the same help page, about SSH.  
+![ScrShot 15](scr/15.png "ScrShot 15")  
 ___
  
 _Thanks for your time!_  
