@@ -10,7 +10,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 But finally we got an error code 0x800f0950 - unable to install OpenSSH.Server~~~~0.0.1.0 in Windows 2019 Server   
-![ScrShot 01](scr/1.png "ScrShot 01")  
+![ScrShot 01](scr/01.png "ScrShot 01")  
 
 Lets try to connect to other system from our Windows 2019 Server:  
 ```
@@ -28,7 +28,7 @@ hostname
 whoami
 uname -a
 ```
-![ScrShot 02](scr/2.png "ScrShot 02")  
+![ScrShot 02](scr/02.png "ScrShot 02")  
 
 Now do something with key management. Try to install OpenSSH module for all users and start agent and ssh:  
 ```
@@ -37,7 +37,7 @@ Start-Service ssh-agent
 Start-Service sshd
 ```
 Unfortunatelly, these commands are finished with red alerts too:  
-![ScrShot 03](scr/3.png "ScrShot 03")  
+![ScrShot 03](scr/03.png "ScrShot 03")  
 
 Finally is the time to generate a user key, this operation works well:  
 ```
@@ -47,15 +47,46 @@ ssh-keygen
 ls
 ```
 Now I have a public/private key pair.  
-![ScrShot 04](scr/4.png "ScrShot 04")  
+![ScrShot 04](scr/04.png "ScrShot 04")  
  
-**5.7.2.**   
+**5.7.2.** Implementing basic SSH settings to increase the security of the client-server connection:  
+- a) disable login with password;  
+- b) set maximum authorization tries to 7;  
+- c) allow authentication by public keys only;  
+- d) change the default `22` port to the random `65103`;  
+- e) disable the `root` ssh login (I have my `maxim` user in the system).  
+```
+sudo vi /etc/ssh/sshd_config
+```
+and change this lines as follow:
+```
+#Port 22
+Port 65103
 
+#MaxauthTries 6
+MaxauthTries 7
 
+#PermitRootLogin prohibit-password
+PermitRootLogin no
+
+#PubkeyAuthentication no
+PubkeyAuthentication yes
+
+#PasswordAuthentication yes
+PasswordAuthentication no
+```
+![ScrShot 05](scr/05.png "ScrShot 05")  
+![ScrShot 06](scr/06.png "ScrShot 06")  
+
+And finally restart the service:  
+```
+sudo  service ssh restart
+sudo  service sshd restart
+```
 
 **5.7.3.**  
 
-
+![ScrShot 07](scr/07.png "ScrShot 07")  
 
 **5.7.4.**  
 
@@ -63,7 +94,7 @@ Now I have a public/private key pair.
 
 **5.7.5.** __optional/facultative__  
 
-![ScrShot 05](scr/5.png "ScrShot 05")  
+
 
 ___
  
