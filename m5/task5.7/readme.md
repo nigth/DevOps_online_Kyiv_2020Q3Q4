@@ -84,9 +84,28 @@ sudo  service ssh restart
 sudo  service sshd restart
 ```
 
-**5.7.3.**  
-
+**5.7.3.** List the options for choosing keys for encryption in SSH.  
+```
+man ssh-keygen
+```
+Specifies the type of key to create.  The possible values are “dsa”, “ecdsa”, “ed25519”, or “rsa” with option "-t".  
+Implement 3 of them. First the  Rivest, Shamir и Adleman algoritm:  
+```
+ssh-keygen -t rsa
+```
 ![ScrShot 07](scr/07.png "ScrShot 07")  
+
+Using the Edwards Twisted Curve algorithm:  
+```
+ssh-keygen -t ed25519
+```
+![ScrShot 08](scr/08.png "ScrShot 08")  
+
+and the DSA Digital Signature Algorithm:  
+```
+ssh-keygen -t dsa
+```
+![ScrShot 09](scr/09.png "ScrShot 09")  
 
 **5.7.4.**  
 
