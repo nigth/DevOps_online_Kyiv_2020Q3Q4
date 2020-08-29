@@ -107,9 +107,56 @@ ssh-keygen -t dsa
 ```
 ![ScrShot 09](scr/09.png "ScrShot 09")  
 
-**5.7.4.**  
+**5.7.4.**. Implement port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.  
+I have two virtual machines:  
+1) Ubuntu 20, with 3 network adapters (NAT, Bridged, Internal), 2 users - `maxim` and `quest`;  
+2) Centos 8, with 1 network adapter only Internal network, with 2 users - `maxim` and `quest`;  
+```
+#ubuntu
+ifconfig -a
+sudo ifconfig enp0s8 192.168.1.2 netmask 255.255.255.0      #Internal virtual network
+sudo ifconfig enp0s9 192.168.6.20 netmask 255.255.255.0     #Bridged with host machine
+ifconfig -a
 
+#cenos
+ifconfig -a
+sudo ifconfig enp0s8 192.168.1.3 netmask 255.255.255.0      #Internal virtual network
+ifconfig -a
+```
+![ScrShot 10](scr/10.png "ScrShot 10")  
 
+Try to connect SSH from host machine to the Ubuntu virtual through bridged network adapter,  
+and inside the session connect to the Centos virtual through internal virtual network. Successful:  
+```
+whoami
+hostname
+uname -a
+
+ssh 192.168.6.20
+whoami
+hostname
+uname -a
+
+ssh guest@192.168.1.3
+whoami
+hostname
+uname -a
+```
+![ScrShot 11](scr/11.png "ScrShot 11")  
+
+Now it's time to realize SSH port forwarding from host machine to the Centos in virtual netwotk, through Ubuntu as bridge (or "jump" host")":  
+```
+whoami
+hostname
+uname -a
+
+ssh -J 192.168.6.20 guest@192.168.1.3
+
+whoami
+hostname
+uname -a
+```
+![ScrShot 12](scr/12.png "ScrShot 12")  
 
 **5.7.5.** __optional/facultative__  
 
