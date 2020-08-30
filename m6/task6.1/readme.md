@@ -113,7 +113,7 @@ netstat -rn
 **6a.1.8.** Trace the route to google.com.  
 ```
 # VM2: CENTOS
-#sudo yum install bind-utils
+#sudo yum install traceroute
 traceroute google.com
 ```
 ![ScrShot 10.](scr/10.png "ScrShot 10")  
