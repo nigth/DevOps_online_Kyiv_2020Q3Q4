@@ -4,6 +4,7 @@
 **3.1.1.** Download MySQL server for your OS.  
 I have installed MySQL DB on the remote server `SVT1111X1RS` (192.168.6.12).  
 I work on the local machine `HP4330` (192.168.6.11). Both have local users `maxim`.  
+
 The remote `root` MySQL login is restricted. Allowed only local `root` MySQL login.  
 So lets go connect SSH to the DB server, check the version, and connect MySQL there:  
 ```
@@ -25,14 +26,31 @@ SELECT version ();
 ![ScrShot 01](scr/01.png "ScrShot 01")  
 
 **3.1.2.** Install MySQL server.  
+I have installed MySQL DB on the remote server `SVT1111X1RS` (192.168.6.12).  
+I work on the local machine `HP4330` (192.168.6.11). Both have local users `maxim`.  
 
+The MySQL server has an `amdin` DB user, who is allowed to connect MySQL remotely.  
+So lets go remote connect the DB server with MySQL `amdin` user, check the version:  
+```
+# local machine, HP4330 (192.168.6.11):
+uname -a
+hostname
+whoami
+
+mysql -h 192.168.6.12 -p -u amdin
+# remote server, SVT1111X1RS (192.168.6.12):
+
+SELECT version();
+```
 ![ScrShot 02](scr/02.png "ScrShot 02")  
+
+- Pay attention, on the next steps I use remote connection to the MySQL with `amdin` credentials.  
+
+**3.1.3.** Describe the database schema (minimum 3 tables).  
 
 ![ScrShot 03](scr/03.png "ScrShot 03")  
 
 ![ScrShot 04](scr/04.png "ScrShot 04")  
-
-**3.1.3.** Describe the database schema (minimum 3 tables).  
 
 ![ScrShot 05](scr/05.png "ScrShot 05")  
 
