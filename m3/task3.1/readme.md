@@ -44,7 +44,7 @@ SELECT version();
 ```
 ![ScrShot 02](scr/02.png "ScrShot 02")  
 
-- __**Pay attention,** on the next steps I use remote connection to the MySQL with `amdin` credentials.__  
+- _**Pay attention,** on the next steps I use remote connection to the MySQL with `amdin` credentials._  
 
 **3.1.3.** Describe the database schema (minimum 3 tables).  
 
