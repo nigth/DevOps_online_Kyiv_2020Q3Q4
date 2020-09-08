@@ -81,15 +81,14 @@ select * from EMPLOYEE;
 
 SELECT version ();
 ```
-
-See that data restored successfully.  
-The MySQL versions are different - on the AWS RDS - 5.7.30-log, on my host I have - 5.7.31-ubuntu (see task 3.1).  
 ![ScrShot 08](scr/08.png "ScrShot 08")  
 
+See that data restored successfully.  
 ![ScrShot 09](scr/09.png "ScrShot 09")  
 
 ![ScrShot 10.](scr/10.png "ScrShot 10")  
 
+The MySQL versions are different - on the AWS RDS - 5.7.30-log, on my host I have - 5.7.31-ubuntu (see task 3.1).  
 ![ScrShot 11.](scr/11.png "ScrShot 11")  
 ___
  
