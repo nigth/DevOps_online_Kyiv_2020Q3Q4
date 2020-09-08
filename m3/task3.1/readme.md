@@ -2,6 +2,7 @@
 ### Module 3 Database Administration
 
 **3.1.1.** Download MySQL server for your OS.  
+
 I have installed MySQL DB on the remote server `SVT1111X1RS` (192.168.6.12).  
 I work on the local machine `HP4330` (192.168.6.11). Both have local users `maxim`.  
 
@@ -26,6 +27,7 @@ SELECT version ();
 ![ScrShot 01](scr/01.png "ScrShot 01")  
 
 **3.1.2.** Install MySQL server.  
+
 I have installed MySQL DB on the remote server `SVT1111X1RS` (192.168.6.12).  
 I work on the local machine `HP4330` (192.168.6.11). Both have local users `maxim`.  
 
@@ -48,17 +50,54 @@ SELECT version();
 
 **3.1.3.** Describe the database schema (minimum 3 tables).  
 
+The office is divided into departments that have names and are located in different cities.  
+For each office employee there first and last name, date of employment, position, monthly rate.  
+Each employee belongs to only one department.  
+Each employee has only one boss. The president of the office does not have a boss.  
+If the employee works as a salesman, he receives an additional compensation at the end of year.  
+Each employee belongs to a group depending on his salary.  
+For each group, the lower and upper limit of salary is determined.  
+
 ![ScrShot 03](scr/03.png "ScrShot 03")  
 
+**3.1.4.** Create a database on the server through the console.  
+```
+# Create a database named `OFFICE` and switch to it.
+CREATE DATABASE OFFICE;
+USE OFFICE;
+
+# Create a table 1 named DEPARTMENT, which has the ID field of integer type, 
+# and NAME and CITY fields of string type with the length limited by 30 characters.
+CREATE TABLE DEPARTMENT (ID INT, NAME VARCHAR(30), CITY VARCHAR(30));
+
+# Create a table 2 named EMPLOYEE with the following fields: 
+#ID (key field), FIRSTNAME, LASTNAME, POSITION – string type, 
+#DATE_EMPLOYMENT – date type, ID_DEPARTMENT, ID_BOSS, RATE, BONUS – integer type.
+CREATE TABLE EMPLOYEE (ID INT PRIMARY KEY,
+FIRSTNAME VARCHAR(30),
+LASTNAME VARCHAR(30),
+POSITION VARCHAR(10),
+DATE_EMPLOYMENT DATE,
+ID_DEPARTMENT INT,
+ID_BOSS INT,
+RATE INT, 
+BONUS INT);
+
+# Create a table 3 named SALARY_GRADE with the following fields: ID (key field), 
+#lower and upper salary bounds LOW_SALARY, HIGH_SALARY – integer type.
+CREATE TABLE SALARY_GRADE (ID INT PRIMARY KEY, LOW_SALARY INT, HIGH_SALARY INT);
+
+# Display what was created:
+SHOW TABLES;
+```
 ![ScrShot 04](scr/04.png "ScrShot 04")  
+
+**3.1.5.** Fill in tables.  
+
 
 ![ScrShot 05](scr/05.png "ScrShot 05")  
 
-**3.1.4.** Create a database on the server through the console.  
-
 ![ScrShot 06](scr/06.png "ScrShot 06")  
-
-**3.1.5.** Fill in tables.  
 
 ![ScrShot 07](scr/07.png "ScrShot 07")  
 
