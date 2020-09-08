@@ -95,9 +95,6 @@ SHOW TABLES;
 **3.1.5.** Fill in tables.  
 ```
 USE OFFICE;
-DELETE FROM DEPARTMENT;
-DELETE FROM EMPLOYEE;
-DELETE FROM SALARY_GRADE;
 
 INSERT INTO DEPARTMENT(ID, NAME, CITY) VALUES (1, 'Head', 'Kyiv');
 INSERT INTO DEPARTMENT(ID, NAME, CITY) VALUES (2, 'West', 'Lviv');
@@ -134,19 +131,22 @@ INSERT INTO SALARY_GRADE (ID, LOW_SALARY, HIGH_SALARY) VALUES (4, 0, 1000);
 
 **3.1.6.** Execute SQL queries DDL, DML, DCL.  
 
-DDL - 
+**DDL** _(Data Definition Language)_. It is used to define database structure or pattern.  
+These are `Create, Alter, Drop, Truncate, Rename, Comment` commands.  
 ```
 
 ```
 ![ScrShot 06](scr/06.png "ScrShot 06")  
 
-DML - 
+**DML** _(Data Manipulation Language)_. It is used for accessing and manipulating data in a database.  
+These are `Select, Insert, Update, Delete, Merge, Call, Explain Plan, Lock Table` commands.  
 ```
 
 ```
 ![ScrShot 07](scr/07.png "ScrShot 07")  
 
-DCL - 
+**DCL** _(Data Control Language)_. It is used to retrieve the stored or saved data.  
+These are `Grant, Revoke` commands for the `Connect, Insert, Usage, Delete, Update, Select` permissions.  
 ```
 
 ```
