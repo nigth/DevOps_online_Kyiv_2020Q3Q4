@@ -52,12 +52,12 @@ https://www.1strategy.com/blog/2017/10/03/migrating-a-mysql-database-to-rds/
 - Create the RDS instance:  
 REGION - Europe (Frankfurt) eu-central-1;
 Standard Create;  
-Engine options - MySQL;
+Engine options - MySQL;  
 Edition - MySQL community ver MySQL 5.7.30;  
 Templates - Free Tier;  
-Settings:
-DB instance identifier - office-db;
-Initial database name - OFFICE;
+Settings:  
+DB instance identifier - office-2;  
+Initial database name - OFFICE;  
 ![ScrShot 05](scr/05.png "ScrShot 05")  
 
 Also create a Security Group for the VPC to restrict access from my IP address:  
