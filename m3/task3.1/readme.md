@@ -94,8 +94,6 @@ SHOW TABLES;
 
 **3.1.5.** Fill in tables.  
 ```
-USE OFFICE;
-
 INSERT INTO DEPARTMENT(ID, NAME, CITY) VALUES (1, 'Head', 'Kyiv');
 INSERT INTO DEPARTMENT(ID, NAME, CITY) VALUES (2, 'West', 'Lviv');
 INSERT INTO DEPARTMENT(ID, NAME, CITY) VALUES (3, 'North', 'Harkiv');
@@ -133,24 +131,61 @@ INSERT INTO SALARY_GRADE (ID, LOW_SALARY, HIGH_SALARY) VALUES (4, 0, 1000);
 
 **DDL** _(Data Definition Language)_. It is used to define database structure or pattern.  
 These are `Create, Alter, Drop, Truncate, Rename, Comment` commands.  
-```
 
+- Add to the DEPARTMENT table a field named STREET which would contain  a street name with length limited by 40 characters.  
+- Change the length of the STREET field from 40 to 30 characters.  
+- Remove the STREET field from DEPARTMENT table.  
+```
+SHOW COLUMNS FROM DEPARTMENT;
+
+ALTER TABLE DEPARTMENT ADD STREET VARCHAR (40);
+SHOW COLUMNS FROM DEPARTMENT;
+
+ALTER TABLE DEPARTMENT MODIFY COLUMN STREET VARCHAR(30);
+SHOW COLUMNS FROM DEPARTMENT;
+
+ALTER TABLE DEPARTMENT DROP COLUMN STREET;
+SHOW COLUMNS FROM DEPARTMENT;
 ```
 ![ScrShot 06](scr/06.png "ScrShot 06")  
 
 **DML** _(Data Manipulation Language)_. It is used for accessing and manipulating data in a database.  
 These are `Select, Insert, Update, Delete, Merge, Call, Explain Plan, Lock Table` commands.  
-```
 
+- Add a new record to the DEPARTMENT table with the following field values: ID = 5, NAME = ‘East‘, CITY = 'Zaporizhzhya'.
+- Add a new employee to the EMPLOYEЕ table who works in the 5th department.
+```
+INSERT INTO DEPARTMENT (ID, NAME, CITY) VALUES (5, 'East', 'Zaporizhzhya');
+SELECT * FROM DEPARTMENT;
+
+INSERT INTO EMPLOYEE (ID, LASTNAME, FIRSTNAME, POSITION, DATE_EMPLOYMENT, ID_DEPARTMENT, ID_BOSS, RATE, BONUS) VALUES (25, 'Semeniv', 'Anatoliy', 'Seller', '2014-10-07', 5, 1, 3200, 400);
+SELECT * FROM EMPLOYEE;
 ```
 ![ScrShot 07](scr/07.png "ScrShot 07")  
+
+- Increase a salary for the 25th employee in one and a half times.
+- Remove the record about 25th employee from EMPLOYEЕ table.
+- Remove the record about 5th department from DEPARTMENT table.
+```
+SELECT * FROM EMPLOYEE WHERE ID = 25;
+UPDATE EMPLOYEE SET RATE = RATE * 1.5 WHERE ID = 25;
+SELECT * FROM EMPLOYEE WHERE ID = 25;
+
+DELETE FROM EMPLOYEE WHERE ID = 25;
+SELECT * FROM EMPLOYEE WHERE ID = 25;
+
+DELETE FROM DEPARTMENT WHERE ID = 5;
+SELECT * FROM DEPARTMENT;
+```
+![ScrShot 08](scr/08.png "ScrShot 08")  
 
 **DCL** _(Data Control Language)_. It is used to retrieve the stored or saved data.  
 These are `Grant, Revoke` commands for the `Connect, Insert, Usage, Delete, Update, Select` permissions.  
 ```
 
+
 ```
-![ScrShot 08](scr/08.png "ScrShot 08")  
+
 
 **3.1.7.** Create database users with different rights.  
 
