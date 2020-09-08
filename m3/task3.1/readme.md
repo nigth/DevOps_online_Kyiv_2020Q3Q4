@@ -219,11 +219,48 @@ SELECT * FROM DEPARTMENT;
 
 **3.1.7.** Create database users with different rights.  
 
-![ScrShot 10.](scr/11.png "ScrShot 11")  
+- Create the user `elena` with partial permissions for view only some columns:  
+```
+# Invoke the command under the `amdin` user (see the left screenshot):
+GRANT SELECT (ID, FIRSTNAME, LASTNAME, POSITION) ON EMPLOYEE TO elena@localhost IDENTIFIED BY 'Elena#55';
+
+# Login to the MySQL server with the `elena` user and run command (see right screen):
+mysql -p -u elena
+use OFFICE;
+SHOW TABLES;
+SELECT * FROM EMPLOYEES;
+SELECT ID, FIRSTNAME, LASTNAME, POSITION FROM EMPLOYEES;
+```
+![ScrShot 11.](scr/11.png "ScrShot 11")  
+
+- Create the user `director` with permissions for insert/update, without view data:  
+```
+# Invoke the command under the `amdin` user (see the left screenshot):
+GRANT INSERT, UPDATE ON DEPARTMENT TO director@localhost IDENTIFIED BY 'Director#5';
+
+# Login to the MySQL server with the `director` user and run command (see right screen):
+mysql -p -u director
+use OFFICE;
+SHOW TABLES;
+SELECT * FROM DEPARTMENT;
+INSERT INTO DEPARTMENT (ID, NAME, CITY) VALUES (5, 'East', 'Zaporizhzhya');
+SELECT * FROM DEPARTMENT;
+
+# Invoke the command under the `amdin` user (see the left screenshot):
+SELECT * FROM DEPARTMENT;
+```
+![ScrShot 12.](scr/12.png "ScrShot 12")  
 
 **3.1.8.** Make a selection from the main table DB MySQL.  
+```
+show databases;
+use mysql;
+show tables;
 
-![ScrShot 12.](scr/12.png "ScrShot 12")  
+select Host,Db,User,Select_priv from db;
+select Host,User,Select_priv,Insert_priv,Update_priv,password_last_changed from user;
+```
+![ScrShot 13.](scr/13.png "ScrShot 13")  
 ___
  
 _Thanks for your time!_  
