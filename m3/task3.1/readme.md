@@ -2,12 +2,31 @@
 ### Module 3 Database Administration
 
 **3.1.1.** Download MySQL server for your OS.  
+I have installed MySQL DB on the remote server `SVT1111X1RS` (192.168.6.12).  
+I work on the local machine `HP4330` (192.168.6.11). Both have local users `maxim`.  
+The remote `root` MySQL login is restricted. Allowed only local `root` MySQL login.  
+So lets go connect SSH to the DB server, check the version, and connect MySQL there:  
+```
+# local machine, HP4330 (192.168.6.11):
+uname -a
+hostname
+whoami
 
+ssh maxim@192.168.6.12
+# remote server, SVT1111X1RS (192.168.6.12):
+uname -a
+hostname
+whoami
+
+mysql --version
+mysql -p -u root
+SELECT version ();
+```
 ![ScrShot 01](scr/01.png "ScrShot 01")  
 
-![ScrShot 02](scr/02.png "ScrShot 02")  
-
 **3.1.2.** Install MySQL server.  
+
+![ScrShot 02](scr/02.png "ScrShot 02")  
 
 ![ScrShot 03](scr/03.png "ScrShot 03")  
 
