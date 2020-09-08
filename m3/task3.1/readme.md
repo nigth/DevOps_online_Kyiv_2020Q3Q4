@@ -181,19 +181,49 @@ SELECT * FROM DEPARTMENT;
 
 **DCL** _(Data Control Language)_. It is used to retrieve the stored or saved data.  
 These are `Grant, Revoke` commands for the `Connect, Insert, Usage, Delete, Update, Select` permissions.  
+
+Next command will create a new MySQL user `vasya` with password `Pupkin#5`.  
+And provide him permissions to the `SELECT` command on the`EMPLOYEE` table:  
 ```
+# Invoke the command under the `amdin` user (see the left screenshot):
+GRANT SELECT ON EMPLOYEE TO vasya@localhost IDENTIFIED BY 'Pupkin#5';
 
-
+# Login to the MySQL server with the new user and run command (see right screen):
+mysql -p -u vasya
+use OFFICE;
+SHOW TABLES;
+SELECT * FROM EMPLOYEE;
 ```
+![ScrShot 09](scr/09.png "ScrShot 09")  
 
+These commands take back permission for user `vasya` on the `EMPLOYEE` table.  
+After that provide him permissions to the `SELECT` command on the`DEPARTMENT` table:  
+```
+# Invoke the command under the `amdin` user (see the left screenshot):
+REVOKE SELECT ON EMPLOYEE FROM vasya@localhost;
+
+# Login to the MySQL server with the `vasya` user and run command (see right screen):
+mysql -p -u vasya
+use OFFICE;
+SHOW TABLES;
+___
+
+# Invoke the command under the `amdin` user (see the left screenshot):
+GRANT SELECT ON EMPLOYEE FROM vasya@localhost;
+
+# Run the command under the `vasya` user  (see the right screenshot):
+SHOW TABLES;
+SELECT * FROM DEPARTMENT;
+```
+![ScrShot 10.](scr/10.png "ScrShot 10")  
 
 **3.1.7.** Create database users with different rights.  
 
-![ScrShot 09](scr/09.png "ScrShot 09")  
+![ScrShot 10.](scr/11.png "ScrShot 11")  
 
 **3.1.8.** Make a selection from the main table DB MySQL.  
 
-![ScrShot 10.](scr/10.png "ScrShot 10")  
+![ScrShot 12.](scr/12.png "ScrShot 12")  
 ___
  
 _Thanks for your time!_  
