@@ -10,7 +10,7 @@ Modeling in the Cisco PacketTracer. For the VM3 I used a clone of VM1 with new m
 ![ScrShot 02](scr/02.png "ScrShot 02")  
 
 :white_check_mark: **6a.2.2.** Install and configure DHCP server on VM1.  
-_(3 ways: using  , DNSMASQ and ISC-DHSPSERVER)_. I prefer to use a DNSMASQ DHCP on `enp0s8` interface.  
+_(3 ways: using  , DNSMASQ and ISC-DHSPSERVER)_. Firstly I try to use a DNSMASQ DHCP on `enp0s8` interface.  
 ```bash
 sudo apt-get install dnsmasq
 sudo vim /etc/dnsmasq.conf
@@ -33,8 +33,16 @@ https://andreyex.ru/ubuntu/kak-osvobodit-port-53-ispolzuemyj-systemd-resolved-v-
 
 ![ScrShot 03](scr/03.png "ScrShot 03")  
 
+But I have got a lot of problems with network, and it doesn't work.
+
+So I revert virtual machine to the previous state, and used a Virtualbox DHCP by command:  
+```
+vboxmanage dhcpserver add --netname intnet --ip 192.168.1.1 --netmask 255.255.255.0 --lowerip 192.168.1.10 --upperip 192.168.1.20 --enable
+```
+
 :white_check_mark: **6a.2.3.** Check VM2 and VM3 for obtaining network addresses from DHCP server.  
 
+Boot one of the virtual machine and see that it's enp0s3 interface has got a 192.168.1.10 address by DHCP  
 ![ScrShot 04](scr/04.png "ScrShot 04")  
 
 :white_check_mark: **6a.2.4.** Using existed network for three VMs (from p.1),  
