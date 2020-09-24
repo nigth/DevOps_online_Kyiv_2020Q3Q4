@@ -9,7 +9,7 @@ VM1 has NAT and internal, VM2, VM3 – internal only interfaces:
 Modeling in the Cisco PacketTracer. For the VM3 I used a clone of VM1 with new mac addresses.  
 ![ScrShot 02](scr/02.png "ScrShot 02")  
 
-:white_check_mark: **6a.2.2.** Install and configure DHCP server on VM1.  
+:heavy_check_mark: **6a.2.2.** Install and configure DHCP server on VM1.  
 _(3 ways: using  , DNSMASQ and ISC-DHSPSERVER)_. Firstly I try to use a DNSMASQ DHCP on `enp0s8` interface.  
 ```bash
 sudo apt-get install dnsmasq
@@ -40,26 +40,45 @@ So I revert virtual machine to the previous state, and used a Virtualbox DHCP by
 vboxmanage dhcpserver add --netname intnet --ip 192.168.1.1 --netmask 255.255.255.0 --lowerip 192.168.1.10 --upperip 192.168.1.20 --enable
 ```
 
-:white_check_mark: **6a.2.3.** Check VM2 and VM3 for obtaining network addresses from DHCP server.  
+:heavy_check_mark: **6a.2.3.** Check VM2 and VM3 for obtaining network addresses from DHCP server.  
 
 Boot one of the virtual machine and see that it's enp0s3 interface has got a 192.168.1.10 address by DHCP  
 ![ScrShot 04](scr/04.png "ScrShot 04")  
 
-:white_check_mark: **6a.2.4.** Using existed network for three VMs (from p.1),  
-install and configure DNS server on VM1. _(using DNSMASQ, BIND9)._ I prefer to use a DNSMASQ DNS.  
-
+This is a CENTOS machine. But on both UBUNTU (VM1 and VM2) the DHCP addresses aren't assigned.  
+I resolved this problem by next commands:
+```
+---
+# VM1
+---
+dhclient -r enp0s8
+sudo dhclient enp0s8
+ifconfig
+---
+# VM3
+---
+dhclient -r enp0s9
+sudo dhclient enp0s9
+ifconfig
+```
+After that both UBUNTU VM have got DHCP addresses (192.168.1.11 and 192.168.1.12):
 ![ScrShot 05](scr/05.png "ScrShot 05")  
+
+:white_check_mark: **6a.2.4.** Using existed network for three VMs (from p.1),  
+install and configure DNS server on VM1. _(using DNSMASQ, BIND9)._ I prefer to use a BIND9 DNS.  
+
+![ScrShot 06](scr/06.png "ScrShot 06")  
 
 :white_check_mark: **6a.2.5.** Check VM2 and VM3 for gaining access to DNS server (naming services).  
 
-![ScrShot 06](scr/06.png "ScrShot 06")  
+![ScrShot 07](scr/07.png "ScrShot 07")  
 
 :negative_squared_cross_mark: **6a.2.6.** _optional, addition task_  
 Using the scheme which follows, configure dynamic routing using OSPF protocol.  
 
 :white_check_mark: **6a.2.7.**  Check results.  
 
-![ScrShot 07](scr/07.png "ScrShot 07")  
+
 
 ![ScrShot 08](scr/08.png "ScrShot 08")  
 
