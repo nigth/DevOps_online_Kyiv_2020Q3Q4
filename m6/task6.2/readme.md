@@ -6,11 +6,30 @@
 VM1 has NAT and internal, VM2, VM3 – internal only interfaces:  
 ![ScrShot 01](scr/01.png "ScrShot 01")  
 
-Modeling in the Cisco PacketTracer:
+Modeling in the Cisco PacketTracer. For the VM3 I used a clone of VM1 with new mac addresses.  
 ![ScrShot 02](scr/02.png "ScrShot 02")  
 
 :white_check_mark: **6a.2.2.** Install and configure DHCP server on VM1.  
-_(3 ways: using  , DNSMASQ and ISC-DHSPSERVER)_. I will use a VBoxManaged DNS.  
+_(3 ways: using  , DNSMASQ and ISC-DHSPSERVER)_. I prefer to use a DNSMASQ DHCP on `enp0s8` interface.  
+```bash
+sudo apt-get install dnsmasq
+sudo vim /etc/dnsmasq.conf
+---
+interface=enp0s8
+domain=myhome.inc
+dhcp-range=192.168.1.20,192.168.1.100,24h
+dhcp-option=3,192.168.1.1
+dhcp-option=1,255.255.255.0
+dhcp-host=08:00:27:be:a8:ab,bunta20,192.168.1.1
+---
+dnsmasq --test
+sudo service dnsmasq restart
+sudo service dnsmasq status
+```
+But I got an error message about 53 TCP port is already in use.  
+`sudo netstat -lntp`  
+So I changed settings for `systemd-resolve` as described in the article:  
+https://andreyex.ru/ubuntu/kak-osvobodit-port-53-ispolzuemyj-systemd-resolved-v-ubuntu/  
 
 ![ScrShot 03](scr/03.png "ScrShot 03")  
 
@@ -19,7 +38,7 @@ _(3 ways: using  , DNSMASQ and ISC-DHSPSERVER)_. I will use a VBoxManaged DNS.
 ![ScrShot 04](scr/04.png "ScrShot 04")  
 
 :white_check_mark: **6a.2.4.** Using existed network for three VMs (from p.1),  
-install and configure DNS server on VM1. _(using DNSMASQ, BIND9 or something else)._  
+install and configure DNS server on VM1. _(using DNSMASQ, BIND9)._ I prefer to use a DNSMASQ DNS.  
 
 ![ScrShot 05](scr/05.png "ScrShot 05")  
 
